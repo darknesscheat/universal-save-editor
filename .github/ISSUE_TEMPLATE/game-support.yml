@@ -1,0 +1,59 @@
+name: Game support request
+description: Ask for a game to be supported, or report one that will not open.
+labels: [plugin]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A plugin cannot be written without a real save file to work from.
+        Everything below exists because it is genuinely needed.
+
+  - type: input
+    id: game
+    attributes:
+      label: Game
+      placeholder: Pathogenic
+    validations:
+      required: true
+
+  - type: input
+    id: store
+    attributes:
+      label: Where you bought it
+      description: Steam, GOG, itch.io, Game Pass…
+    validations:
+      required: true
+
+  - type: dropdown
+    id: engine
+    attributes:
+      label: Engine, if you know
+      options:
+        - I do not know
+        - Godot (there is a .pck file next to the exe)
+        - GameMaker (there is a data.win)
+        - Unity (there is a *_Data folder)
+        - Unreal
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: location
+    attributes:
+      label: Where the save files are
+      description: >
+        The folder path, and the names of the files in it. On Windows try
+        %APPDATA% and %LOCALAPPDATA%.
+    validations:
+      required: true
+
+  - type: textarea
+    id: save
+    attributes:
+      label: A save file
+      description: >
+        Attach one by dragging it in. Please check it first: a save can hold a
+        player name or a Steam ID.
+    validations:
+      required: false

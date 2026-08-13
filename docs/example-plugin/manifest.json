@@ -1,0 +1,120 @@
+{
+  "id": "example-game",
+  "name": "Example Game",
+  "version": "1.0.0",
+  "author": "Universal Save Editor contributors",
+  "description": "A worked example for plugin authors. Copy this folder into plugins/ and rename it.",
+  "format": "json",
+
+  "save_locations": [
+    {
+      "root": "{APPDATA}/ExampleGame",
+      "pattern": "save_*.json"
+    }
+  ],
+
+  "identify": [
+    { "pointer": "/player/health" }
+  ],
+
+  "label": {
+    "title_pointer": "/player/name",
+    "subtitle_pointer": "/chapter",
+    "subtitle_prefix": "Chapter "
+  },
+
+  "option_sets": {
+    "difficulty": [
+      { "value": "easy", "label": "Easy" },
+      { "value": "normal", "label": "Normal" },
+      { "value": "hard", "label": "Hard" }
+    ]
+  },
+
+  "groups": [
+    {
+      "id": "character",
+      "label": "Character",
+      "description": "Your character in this save.",
+      "fields": [
+        {
+          "id": "name",
+          "label": "Name",
+          "pointer": "/player/name",
+          "type": "text",
+          "max_length": 24
+        },
+        {
+          "id": "health",
+          "label": "Health",
+          "pointer": "/player/health",
+          "type": "integer",
+          "min": 1,
+          "max": 9999
+        },
+        {
+          "id": "stamina",
+          "label": "Stamina",
+          "help": "The game stores this with a decimal point, so the field is a 'number', not an 'integer'.",
+          "pointer": "/player/stamina",
+          "type": "number",
+          "min": 0,
+          "max": 100
+        },
+        {
+          "id": "gold",
+          "label": "Gold",
+          "pointer": "/player/gold",
+          "type": "integer",
+          "min": 0,
+          "max": 99999999
+        },
+        {
+          "id": "difficulty",
+          "label": "Difficulty",
+          "pointer": "/player/difficulty",
+          "type": "choice",
+          "options_ref": "difficulty"
+        },
+        {
+          "id": "tutorial_done",
+          "label": "Tutorial finished",
+          "pointer": "/player/tutorial_done",
+          "type": "boolean"
+        },
+        {
+          "id": "save_version",
+          "label": "Save version",
+          "help": "Shown for reference only — changing it would confuse the game.",
+          "pointer": "/version",
+          "type": "text",
+          "read_only": true
+        }
+      ]
+    },
+    {
+      "id": "inventory",
+      "label": "Inventory",
+      "description": "Only shown when this save actually has an inventory.",
+      "requires": "/inventory",
+      "lists": [
+        {
+          "id": "items",
+          "label": "Items",
+          "pointer": "/inventory",
+          "item_label_pointer": "/name",
+          "fields": [
+            {
+              "id": "qty",
+              "label": "Quantity",
+              "pointer": "/qty",
+              "type": "integer",
+              "min": 0,
+              "max": 999
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

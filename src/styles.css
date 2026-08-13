@@ -1,0 +1,766 @@
+/* Dark, quiet, plain. Nothing animates that does not have to. */
+
+:root {
+  --bg: #0f1115;
+  --surface: #171a21;
+  --surface-hover: #1d222b;
+  --border: #262b36;
+  --text: #e6e8ec;
+  --text-dim: #969ba7;
+  --text-faint: #6b7280;
+  --accent: #4f8cff;
+  --accent-hover: #3d7bf0;
+  --danger: #ef5350;
+  --danger-dim: #3a1f21;
+  --ok: #4ade80;
+  --ok-dim: #14311f;
+  --warn: #fbbf24;
+  --radius: 8px;
+
+  color-scheme: dark;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 15px;
+}
+
+/* Every colour above is a token, so a light theme is a second set of values
+   rather than a second stylesheet. "System" sets no attribute at all and lets
+   the media query decide; an explicit choice sets `data-theme` and wins. */
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --bg: #f7f8fa;
+    --surface: #ffffff;
+    --surface-hover: #eef0f4;
+    --border: #dcdfe6;
+    --text: #14171c;
+    --text-dim: #5b6270;
+    --text-faint: #868d9a;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --danger: #dc2626;
+    --danger-dim: #fee2e2;
+    --ok: #16a34a;
+    --ok-dim: #dcfce7;
+    --warn: #b45309;
+    color-scheme: light;
+  }
+}
+
+:root[data-theme="light"] {
+  --bg: #f7f8fa;
+  --surface: #ffffff;
+  --surface-hover: #eef0f4;
+  --border: #dcdfe6;
+  --text: #14171c;
+  --text-dim: #5b6270;
+  --text-faint: #868d9a;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --danger: #dc2626;
+  --danger-dim: #fee2e2;
+  --ok: #16a34a;
+  --ok-dim: #dcfce7;
+  --warn: #b45309;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Nothing in this app should be selectable-and-dragged like a web page. */
+button,
+label {
+  user-select: none;
+}
+
+.app {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 28px 24px 64px;
+}
+
+/* ---------- header ---------- */
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  min-height: 34px;
+}
+
+.header h1 {
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.header .sub {
+  color: var(--text-dim);
+  font-size: 13px;
+  margin: 2px 0 0;
+}
+
+.header .spacer {
+  flex: 1;
+}
+
+/* ---------- buttons ---------- */
+
+button {
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  background: var(--surface-hover);
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+button.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-weight: 500;
+}
+
+button.primary:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+button.ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--text-dim);
+  padding: 6px 10px;
+}
+
+button.ghost:hover:not(:disabled) {
+  background: var(--surface);
+  color: var(--text);
+}
+
+button.danger {
+  color: var(--danger);
+  border-color: var(--border);
+  background: transparent;
+}
+
+button.danger:hover:not(:disabled) {
+  background: var(--danger-dim);
+}
+
+button.small {
+  padding: 5px 10px;
+  font-size: 13px;
+}
+
+/* ---------- cards / rows ---------- */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  width: 100%;
+  text-align: left;
+  display: block;
+  margin-bottom: 8px;
+}
+
+button.card {
+  cursor: pointer;
+}
+
+button.card:hover {
+  background: var(--surface-hover);
+  border-color: #313846;
+}
+
+.card .title {
+  font-weight: 500;
+}
+
+.card .meta {
+  color: var(--text-dim);
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ---------- inputs ---------- */
+
+input[type="text"],
+input[type="number"],
+select {
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 7px 10px;
+  width: 100%;
+}
+
+input:focus,
+select:focus,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: -1px;
+}
+
+input:disabled,
+select:disabled {
+  color: var(--text-faint);
+  cursor: default;
+}
+
+input.invalid {
+  border-color: var(--danger);
+}
+
+.search {
+  margin-bottom: 16px;
+}
+
+/* ---------- editor ---------- */
+
+.group {
+  margin-bottom: 28px;
+}
+
+.group > h2 {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  margin: 0 0 4px;
+}
+
+.group > .desc {
+  color: var(--text-faint);
+  font-size: 13px;
+  margin: 0 0 12px;
+}
+
+.field {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 14px;
+  align-items: center;
+  padding: 7px 0;
+}
+
+.field > label {
+  color: var(--text-dim);
+  font-size: 14px;
+}
+
+.field .help {
+  grid-column: 2;
+  color: var(--text-faint);
+  font-size: 12px;
+  margin-top: -2px;
+}
+
+.field .error {
+  grid-column: 2;
+  color: var(--danger);
+  font-size: 12px;
+  margin-top: -2px;
+}
+
+.field.missing > label {
+  color: var(--text-faint);
+}
+
+.list-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  background: var(--surface);
+}
+
+.list-item > .name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-dim);
+  margin-bottom: 4px;
+}
+
+.list-item .field {
+  grid-template-columns: 110px 1fr;
+  padding: 5px 0;
+}
+
+/* ---------- notices ---------- */
+
+.notice {
+  border-radius: var(--radius);
+  padding: 11px 14px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  border: 1px solid var(--border);
+}
+
+.notice.ok {
+  background: var(--ok-dim);
+  border-color: color-mix(in srgb, var(--ok) 40%, transparent);
+  color: var(--ok);
+}
+
+.notice.error {
+  background: var(--danger-dim);
+  border-color: color-mix(in srgb, var(--danger) 40%, transparent);
+  color: var(--danger);
+}
+
+.notice.info {
+  background: var(--surface);
+  color: var(--text-dim);
+}
+
+/* The promise the app makes, stated plainly wherever a write can happen. */
+.safety {
+  color: var(--text-faint);
+  font-size: 12.5px;
+  margin-top: 10px;
+}
+
+/* ---------- save bar ---------- */
+
+.savebar {
+  position: sticky;
+  bottom: 0;
+  background: linear-gradient(to top, var(--bg) 65%, transparent);
+  padding: 18px 0 10px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.savebar .count {
+  color: var(--text-dim);
+  font-size: 13px;
+}
+
+/* ---------- misc ---------- */
+
+.empty {
+  color: var(--text-dim);
+  text-align: center;
+  padding: 48px 16px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.path {
+  font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+  font-size: 12px;
+  color: var(--text-faint);
+  word-break: break-all;
+}
+
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.tabs button {
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  color: var(--text-dim);
+  padding: 8px 12px;
+}
+
+.tabs button.active {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+
+/* --- Game cards -------------------------------------------------------- */
+
+/* A picture makes a game findable at a glance; the name alone means reading
+   every row. Games with no artwork get a generated tile instead, so the list
+   stays visually even rather than half-illustrated. */
+.card.game {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* --- The game grid ----------------------------------------------------- */
+
+/* Laid out like a game library: portrait cover art, name underneath. Using
+   `auto-fill` with a minimum rather than a fixed column count lets the grid
+   reflow to whatever width the window happens to be, down to a narrow panel. */
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(148px, 1fr));
+  gap: 20px 16px;
+  margin-top: 4px;
+}
+
+.game-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 0;
+  border: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* Cover art is 2:3, the shape every store uses for a portrait capsule. The
+   aspect ratio is declared rather than a fixed height so a tile keeps its
+   proportions at any column width, and so the fallback monogram occupies
+   exactly the same box as real artwork. */
+.game-cover {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  background: var(--surface-hover);
+  border: 1px solid var(--border);
+  transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
+}
+
+.game-cover.fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  border-color: transparent;
+}
+
+.game-tile:hover .game-cover,
+.game-tile:focus-visible .game-cover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 8px 20px rgb(0 0 0 / 0.35);
+}
+
+/* The tile takes no focus ring of its own: the cover shows focus instead, so
+   the outline follows the artwork rather than boxing in the caption too. */
+.game-tile:focus {
+  outline: none;
+}
+
+.game-tile-name {
+  font-size: 14px;
+  font-weight: 550;
+  line-height: 1.3;
+  /* Long names wrap to a second line rather than being cut off. Three lines is
+     where a caption stops being a caption. */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .game-cover {
+    transition: none;
+  }
+  .game-tile:hover .game-cover,
+  .game-tile:focus-visible .game-cover {
+    transform: none;
+  }
+}
+
+/* Landscape, because that is the shape store artwork actually comes in; a
+   square would crop the middle out of every header image. Sized so a 460x215
+   source is still being downscaled even on a 2x display, which keeps it
+   sharp. */
+.game-icon {
+  width: 104px;
+  height: 49px;
+  flex: 0 0 104px;
+  border-radius: 6px;
+  object-fit: cover;
+  background: var(--surface-hover);
+  border: 1px solid var(--border);
+}
+
+.game-icon.fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  border-color: transparent;
+}
+/* --- Risky values, confirmation, change summary ------------------------ */
+
+/* Amber, not red: the value is unusual, not wrong. Red would say "you have
+   made a mistake" about a number the game itself might well have written. */
+input.risky,
+select.risky {
+  border-color: var(--warn);
+}
+
+.warn-text {
+  color: var(--warn);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.notice.warn {
+  background: color-mix(in srgb, var(--warn) 14%, var(--bg));
+  border-color: color-mix(in srgb, var(--warn) 40%, transparent);
+  color: var(--warn);
+}
+
+.changes {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+.changes li {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.changes li:last-child {
+  border-bottom: none;
+}
+
+.changes .name {
+  flex: 1 1 auto;
+  min-width: 120px;
+  color: var(--text-dim);
+}
+
+.changes .from {
+  color: var(--text-faint);
+  text-decoration: line-through;
+}
+
+.changes .arrow {
+  color: var(--text-faint);
+}
+
+.changes .to {
+  font-variant-numeric: tabular-nums;
+}
+
+.changes li.risky .to {
+  color: var(--warn);
+}
+
+.changes .limit {
+  flex-basis: 100%;
+  color: var(--warn);
+  font-size: 12px;
+}
+
+/* --- Dialog ------------------------------------------------------------ */
+
+.scrim {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 10;
+}
+
+.dialog {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  width: 100%;
+  max-width: 520px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.dialog h2 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 18px;
+}
+/* Setting forty-nine flags one at a time is not a thing to ask of anyone. */
+.bulk {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 4px 0 10px;
+}
+/* --- Searchable dropdown ----------------------------------------------- */
+
+.combo {
+  position: relative;
+}
+
+.combo-value {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  background: var(--bg);
+  border-radius: 6px;
+  padding: 7px 10px;
+  text-align: left;
+}
+
+.combo-caret {
+  color: var(--text-faint);
+  font-size: 11px;
+}
+
+.combo-menu {
+  position: absolute;
+  z-index: 5;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 6px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.combo-search {
+  margin-bottom: 6px;
+}
+
+.combo-list {
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.combo-option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 8px;
+  font-size: 14px;
+}
+
+.combo-option.active {
+  background: var(--surface-hover);
+}
+
+.combo-option.selected {
+  color: var(--accent);
+}
+
+.combo-empty {
+  color: var(--text-faint);
+  font-size: 12.5px;
+  padding: 8px;
+}
+/* --- Changed fields ----------------------------------------------------- */
+
+.field > label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* A quiet marker on the rows you have touched, so the page shows its own
+   diff without needing to be read twice. */
+.field.changed > label {
+  color: var(--text);
+}
+
+.revert {
+  background: none;
+  border: none;
+  padding: 0 2px;
+  font-size: 13px;
+  line-height: 1;
+  color: var(--text-faint);
+  cursor: pointer;
+}
+
+.revert:hover {
+  color: var(--accent);
+  background: none;
+}
+
+.tabs {
+  flex-wrap: wrap;
+}
+/* --- Item artwork ------------------------------------------------------- */
+
+/* Read from the player's own copy of the game, never bundled. Sprites are
+   wide and thin, so the box is letterboxed rather than cropped: a cropped
+   weapon is unrecognisable. */
+.item-icon {
+  height: 22px;
+  width: 40px;
+  object-fit: contain;
+  flex: 0 0 40px;
+  image-rendering: auto;
+}
+
+.item-icon.large {
+  height: 34px;
+  width: 60px;
+  flex: 0 0 60px;
+}
+
+.combo-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

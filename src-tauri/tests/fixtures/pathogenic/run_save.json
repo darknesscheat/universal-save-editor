@@ -1,0 +1,108 @@
+{
+	"alive_proximity_spawners": {},
+	"antibiotics": {},
+	"bodypart_rewards": [],
+	"chests": [],
+	"daily_run": 0,
+	"endless_tier": 0,
+	"game_state": {
+		"devil_secret_marking_used": false,
+		"heart_boss_defeated": false,
+		"is_shopkeeper_angered": false
+	},
+	"level_number": 1,
+	"panic_count": 0,
+	"pickups": [],
+	"plasmids": [],
+	"player": {
+		"armor": 0,
+		"dna": 7,
+		"dodge_cd": 1.2,
+		"dodge_invulnerability": 0.5,
+		"hp": 6,
+		"level": 1,
+		"loadout": [
+			{
+				"bodypart": "gun",
+				"rarity": 0,
+				"slot": "ESlot1"
+			},
+			{
+				"bodypart": "gun",
+				"rarity": 0,
+				"slot": "ESlot2"
+			},
+			{
+				"bodypart": "lash",
+				"rarity": 0,
+				"slot": "EBackSlot1"
+			},
+			{
+				"bodypart": "lash",
+				"rarity": 0,
+				"slot": "EBackSlot2"
+			},
+			{
+				"bodypart": "lightning",
+				"rarity": 0,
+				"slot": "ISlot1"
+			},
+			{
+				"bodypart": "generator",
+				"rarity": 0,
+				"slot": "ISlot2"
+			}
+		],
+		"max_hp": 6,
+		"max_stamina": 100.0,
+		"money": 250,
+		"mutations": [
+			{
+				"path": "res://scn/player/mutations/all/dodge_invul_mutation.tres"
+			}
+		],
+		"player_scene": "res://scn/player/player.tscn",
+		"position_x": 12442.3876953125,
+		"position_y": -9181.54296875,
+		"stamina": 100.0
+	},
+	"rerolls_available": 0,
+	"rooms": [
+		{
+			"entered": true,
+			"perfected": true,
+			"teleport": true
+		},
+		{
+			"entered": false,
+			"perfected": true,
+			"teleport": false
+		}
+	],
+	"run_time": 165.622444334296,
+	"secret_code": {
+		"key_dir_order": [
+			1,
+			0,
+			2,
+			3
+		],
+		"pulse_done": false,
+		"run_code": [
+			3,
+			2,
+			0,
+			1
+		],
+		"unlocked_dirs": [],
+		"visit_count": 0
+	},
+	"seed": "TESTSEED",
+	"selected_parasite": 0,
+	"shop_items": {},
+	"special_entrances": {},
+	"stash": {
+		"bodyparts": [],
+		"num_slots": 0
+	}
+}

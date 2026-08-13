@@ -1,0 +1,53 @@
+{
+	"achievements": {
+		"level_1": true
+	},
+	"antibiotics0": {
+		"max_antibiotic_level_finished": 0.0,
+		"max_floor_finished": 1.0
+	},
+	"discoveries": {
+		"generator": 0.0,
+		"gun": 0.0,
+		"lash": 0.0,
+		"lightning": 0.0
+	},
+	"enemy_discoveries": {
+		"fly_enemy": true,
+		"macrophage": true,
+		"worm": true
+	},
+	"enemy_kill_counts": {
+		"fly_enemy": 52.0,
+		"macrophage": 12.0,
+		"worm": 6.0
+	},
+	"loadouts": {
+		"player0": [
+			{
+				"bodypart": "gun",
+				"rarity": 0.0,
+				"slot": "ESlot1"
+			}
+		]
+	},
+	"mutation_discoveries": {
+		"dodge_invul_mutation": true,
+		"stamina_mutation": true
+	},
+	"plasmids": {
+		"fragment_num": 36.0
+	},
+	"settings": {
+		"main_volume": 0.1
+	},
+	"stats0": {
+		"boss_beaten": 1.0,
+		"enemies_killed": 150.0,
+		"max_armor": 1.0,
+		"max_hp": 6,
+		"max_money": 999996,
+		"max_mutations": 5.0,
+		"max_single_hit_damage": 966.0
+	}
+}

@@ -1,0 +1,67 @@
+{
+	"achievements": [],
+	"tracked_progress": {
+		"save_slots": {
+			"1": {
+				"currency": 275.0,
+				"difficulty": 0,
+				"location": 0,
+				"mission_index": 1,
+				"tools": {
+					"0": {
+						"durability": 4,
+						"id": "apple"
+					},
+					"1": {
+						"durability": 12,
+						"id": "card_angle"
+					},
+					"2": {
+						"durability": 0,
+						"id": ""
+					},
+					"3": {
+						"durability": 0,
+						"id": ""
+					},
+					"4": {
+						"durability": 0,
+						"id": ""
+					},
+					"5": {
+						"durability": 0,
+						"id": ""
+					}
+				},
+				"van_tools": {
+					"0": {
+						"durability": 7,
+						"id": "flashlight"
+					},
+					"1": {
+						"durability": 0,
+						"id": ""
+					},
+					"2": {
+						"durability": 0,
+						"id": ""
+					},
+					"3": {
+						"durability": 0,
+						"id": ""
+					}
+				}
+			},
+			"2": {
+
+			},
+			"3": {
+
+			}
+		}
+	},
+	"tracking": {
+		"mushrooms_collected": 0.0
+	},
+	"version": 77.1
+}

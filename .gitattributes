@@ -1,0 +1,7 @@
+# Keep line endings consistent in the repository regardless of platform.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.ico binary
+*.icns binary

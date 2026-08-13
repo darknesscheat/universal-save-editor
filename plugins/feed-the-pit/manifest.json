@@ -1,0 +1,1705 @@
+{
+    "id":  "feed-the-pit",
+    "name":  "Feed The Pit",
+    "version":  "1.0.0",
+    "format":  "json",
+    "icon_sources":  [
+                         {
+                             "path":  "{STEAM}/appcache/librarycache/3278290/*/library_600x900.jpg"
+                         },
+                         {
+                             "path":  "{STEAM}/appcache/librarycache/3278290/*/library_capsule.jpg"
+                         },
+                         {
+                             "path":  "{STEAM}/appcache/librarycache/3278290/*/library_header.jpg"
+                         },
+                         {
+                             "path":  "{STEAM}/appcache/librarycache/3278290/*/logo.png"
+                         },
+                         {
+                             "path":  "{STEAM}/appcache/librarycache/3278290/*.jpg"
+                         }
+                     ],
+    "process_names":  [
+                          "ftp"
+                      ],
+    "save_locations":  [
+                           {
+                               "platforms":  [
+                                                 "windows"
+                                             ],
+                               "root":  "{APPDATA}/Godot/app_userdata/Feed The Pit/data",
+                               "pattern":  "progress.save",
+                               "label":  "Progress",
+                               "identify":  [
+                                                {
+                                                    "pointer":  "/tracked_progress/save_slots"
+                                                }
+                                            ],
+                               "label_i18n":  {
+                                                  "tr":  "İlerleme",
+                                                  "de":  "Fortschritt",
+                                                  "es":  "Progreso",
+                                                  "fr":  "Progression",
+                                                  "it":  "Progressi",
+                                                  "pt-BR":  "Progresso",
+                                                  "ru":  "Прогресс",
+                                                  "pl":  "Postęp",
+                                                  "uk":  "Прогрес",
+                                                  "ja":  "進行状況",
+                                                  "ko":  "진행 상황",
+                                                  "zh-CN":  "进度"
+                                              }
+                           },
+                           {
+                               "platforms":  [
+                                                 "windows"
+                                             ],
+                               "root":  "{APPDATA}/Godot/app_userdata/Feed The Pit/data",
+                               "pattern":  "character_memories.save",
+                               "label":  "Character memories",
+                               "identify":  [
+                                                {
+                                                    "pointer":  "/death_amount"
+                                                }
+                                            ],
+                               "label_i18n":  {
+                                                  "tr":  "Karakter anıları",
+                                                  "de":  "Erinnerungen der Figuren",
+                                                  "es":  "Recuerdos de personajes",
+                                                  "fr":  "Souvenirs des personnages",
+                                                  "it":  "Ricordi dei personaggi",
+                                                  "pt-BR":  "Memórias dos personagens",
+                                                  "ru":  "Воспоминания персонажей",
+                                                  "pl":  "Wspomnienia postaci",
+                                                  "uk":  "Спогади персонажів",
+                                                  "ja":  "キャラクターの記憶",
+                                                  "ko":  "캐릭터 기억",
+                                                  "zh-CN":  "角色记忆"
+                                              }
+                           },
+                           {
+                               "platforms":  [
+                                                 "linux",
+                                                 "macos"
+                                             ],
+                               "root":  "{APPDATA}/godot/app_userdata/Feed The Pit/data",
+                               "pattern":  "progress.save",
+                               "label":  "Progress",
+                               "identify":  [
+                                                {
+                                                    "pointer":  "/tracked_progress/save_slots"
+                                                }
+                                            ],
+                               "label_i18n":  {
+                                                  "tr":  "İlerleme",
+                                                  "de":  "Fortschritt",
+                                                  "es":  "Progreso",
+                                                  "fr":  "Progression",
+                                                  "it":  "Progressi",
+                                                  "pt-BR":  "Progresso",
+                                                  "ru":  "Прогресс",
+                                                  "pl":  "Postęp",
+                                                  "uk":  "Прогрес",
+                                                  "ja":  "進行状況",
+                                                  "ko":  "진행 상황",
+                                                  "zh-CN":  "进度"
+                                              }
+                           },
+                           {
+                               "platforms":  [
+                                                 "linux",
+                                                 "macos"
+                                             ],
+                               "root":  "{APPDATA}/godot/app_userdata/Feed The Pit/data",
+                               "pattern":  "character_memories.save",
+                               "label":  "Character memories",
+                               "identify":  [
+                                                {
+                                                    "pointer":  "/death_amount"
+                                                }
+                                            ],
+                               "label_i18n":  {
+                                                  "tr":  "Karakter anıları",
+                                                  "de":  "Erinnerungen der Figuren",
+                                                  "es":  "Recuerdos de personajes",
+                                                  "fr":  "Souvenirs des personnages",
+                                                  "it":  "Ricordi dei personaggi",
+                                                  "pt-BR":  "Memórias dos personagens",
+                                                  "ru":  "Воспоминания персонажей",
+                                                  "pl":  "Wspomnienia postaci",
+                                                  "uk":  "Спогади персонажів",
+                                                  "ja":  "キャラクターの記憶",
+                                                  "ko":  "캐릭터 기억",
+                                                  "zh-CN":  "角色记忆"
+                                              }
+                           }
+                       ],
+    "option_sets":  {
+                        "tools":  [
+                                      {
+                                          "value":  "",
+                                          "label":  "(empty)",
+                                          "label_i18n":  {
+                                                             "tr":  "(boş)",
+                                                             "de":  "(leer)",
+                                                             "es":  "(vacío)",
+                                                             "fr":  "(vide)",
+                                                             "it":  "(vuoto)",
+                                                             "pt-BR":  "(vazio)",
+                                                             "ru":  "(пусто)",
+                                                             "pl":  "(puste)",
+                                                             "uk":  "(порожньо)",
+                                                             "ja":  "（空）",
+                                                             "ko":  "(비어 있음)",
+                                                             "zh-CN":  "（空）"
+                                                         }
+                                      },
+                                      {
+                                          "value":  "apple",
+                                          "label":  "Apple"
+                                      },
+                                      {
+                                          "value":  "camera",
+                                          "label":  "Camera"
+                                      },
+                                      {
+                                          "value":  "club",
+                                          "label":  "Club"
+                                      },
+                                      {
+                                          "value":  "dagger",
+                                          "label":  "Dagger"
+                                      },
+                                      {
+                                          "value":  "dealers_glove",
+                                          "label":  "Dealer\u0027s Glove"
+                                      },
+                                      {
+                                          "value":  "earring",
+                                          "label":  "Earring"
+                                      },
+                                      {
+                                          "value":  "espresso",
+                                          "label":  "Espresso"
+                                      },
+                                      {
+                                          "value":  "flashlight",
+                                          "label":  "Flashlight"
+                                      },
+                                      {
+                                          "value":  "floatie",
+                                          "label":  "Floatie"
+                                      },
+                                      {
+                                          "value":  "gamblers_die",
+                                          "label":  "Gambler\u0027s Die"
+                                      },
+                                      {
+                                          "value":  "gold_watch",
+                                          "label":  "Gold Watch"
+                                      },
+                                      {
+                                          "value":  "golden_apple",
+                                          "label":  "Golden Apple"
+                                      },
+                                      {
+                                          "value":  "gun",
+                                          "label":  "Gun"
+                                      },
+                                      {
+                                          "value":  "hand",
+                                          "label":  "Hand"
+                                      },
+                                      {
+                                          "value":  "icarus_charm",
+                                          "label":  "Icarus\u0027 Feather"
+                                      },
+                                      {
+                                          "value":  "jump_feather",
+                                          "label":  "Jump Feather"
+                                      },
+                                      {
+                                          "value":  "pizza",
+                                          "label":  "Gift Shop Pizza"
+                                      },
+                                      {
+                                          "value":  "placeholder",
+                                          "label":  "Placeholder"
+                                      },
+                                      {
+                                          "value":  "protector_note",
+                                          "label":  "Protector Note"
+                                      },
+                                      {
+                                          "value":  "red_tie",
+                                          "label":  "Red Tie"
+                                      },
+                                      {
+                                          "value":  "riskier_roll",
+                                          "label":  "Risky Roll"
+                                      },
+                                      {
+                                          "value":  "sage",
+                                          "label":  "Sage"
+                                      },
+                                      {
+                                          "value":  "sinful_stone",
+                                          "label":  "Sinful Stone"
+                                      },
+                                      {
+                                          "value":  "speed_berry",
+                                          "label":  "Speed Berry"
+                                      },
+                                      {
+                                          "value":  "wedding_ring",
+                                          "label":  "Wedding Ring"
+                                      },
+                                      {
+                                          "value":  "whittled_bird",
+                                          "label":  "Whittled Bird"
+                                      },
+                                      {
+                                          "value":  "card_angle",
+                                          "label":  "Angle"
+                                      },
+                                      {
+                                          "value":  "card_bolt",
+                                          "label":  "Bolt"
+                                      },
+                                      {
+                                          "value":  "card_club",
+                                          "label":  "Club"
+                                      },
+                                      {
+                                          "value":  "card_column",
+                                          "label":  "Column"
+                                      },
+                                      {
+                                          "value":  "card_crescent",
+                                          "label":  "Crescent"
+                                      },
+                                      {
+                                          "value":  "card_crosshair",
+                                          "label":  "Crosshair"
+                                      },
+                                      {
+                                          "value":  "card_death_skull",
+                                          "label":  "Skull"
+                                      },
+                                      {
+                                          "value":  "card_dev",
+                                          "label":  "Dev"
+                                      },
+                                      {
+                                          "value":  "card_diameter",
+                                          "label":  "Diameter"
+                                      },
+                                      {
+                                          "value":  "card_elevation",
+                                          "label":  "Elevation"
+                                      },
+                                      {
+                                          "value":  "card_eyeball",
+                                          "label":  "Eyeball"
+                                      },
+                                      {
+                                          "value":  "card_fish",
+                                          "label":  "Fish"
+                                      },
+                                      {
+                                          "value":  "card_gears",
+                                          "label":  "Gears"
+                                      },
+                                      {
+                                          "value":  "card_grave",
+                                          "label":  "Grave"
+                                      },
+                                      {
+                                          "value":  "card_half",
+                                          "label":  "Half"
+                                      },
+                                      {
+                                          "value":  "card_heart",
+                                          "label":  "Heart"
+                                      },
+                                      {
+                                          "value":  "card_horseshoe",
+                                          "label":  "Horseshoe"
+                                      },
+                                      {
+                                          "value":  "card_map_edge",
+                                          "label":  "Map Edge"
+                                      },
+                                      {
+                                          "value":  "card_misprint",
+                                          "label":  "ntMispri"
+                                      },
+                                      {
+                                          "value":  "card_north",
+                                          "label":  "North or South"
+                                      },
+                                      {
+                                          "value":  "card_pepper",
+                                          "label":  "Pepper"
+                                      },
+                                      {
+                                          "value":  "card_petals",
+                                          "label":  "Petals"
+                                      },
+                                      {
+                                          "value":  "card_pill",
+                                          "label":  "Pill"
+                                      },
+                                      {
+                                          "value":  "card_pinpoint",
+                                          "label":  "Pinpoint"
+                                      },
+                                      {
+                                          "value":  "card_pocket",
+                                          "label":  "Pocket"
+                                      },
+                                      {
+                                          "value":  "card_portal_closest",
+                                          "label":  "Close Portal"
+                                      },
+                                      {
+                                          "value":  "card_portal_near_another",
+                                          "label":  "Card"
+                                      },
+                                      {
+                                          "value":  "card_prism",
+                                          "label":  "Prism"
+                                      },
+                                      {
+                                          "value":  "card_pyramid",
+                                          "label":  "Pyramid"
+                                      },
+                                      {
+                                          "value":  "card_quadrant",
+                                          "label":  "Quadrant"
+                                      },
+                                      {
+                                          "value":  "card_ripple",
+                                          "label":  "Ripple"
+                                      },
+                                      {
+                                          "value":  "card_row",
+                                          "label":  "Row"
+                                      },
+                                      {
+                                          "value":  "card_sawblade",
+                                          "label":  "Sawblade"
+                                      },
+                                      {
+                                          "value":  "card_scanlines",
+                                          "label":  "Scanlines"
+                                      },
+                                      {
+                                          "value":  "card_scythe",
+                                          "label":  "Scythe"
+                                      },
+                                      {
+                                          "value":  "card_sickle",
+                                          "label":  "Sickle"
+                                      },
+                                      {
+                                          "value":  "card_space_diamond",
+                                          "label":  "Diamond"
+                                      },
+                                      {
+                                          "value":  "card_space_four",
+                                          "label":  "4 Spaces"
+                                      },
+                                      {
+                                          "value":  "card_space_one",
+                                          "label":  "1 Space"
+                                      },
+                                      {
+                                          "value":  "card_space_three",
+                                          "label":  "3 Spaces"
+                                      },
+                                      {
+                                          "value":  "card_space_two",
+                                          "label":  "2 Spaces"
+                                      },
+                                      {
+                                          "value":  "card_spade",
+                                          "label":  "Spade"
+                                      },
+                                      {
+                                          "value":  "card_star",
+                                          "label":  "Star"
+                                      },
+                                      {
+                                          "value":  "card_sun",
+                                          "label":  "Sun"
+                                      },
+                                      {
+                                          "value":  "card_sword",
+                                          "label":  "Sword"
+                                      },
+                                      {
+                                          "value":  "card_valley",
+                                          "label":  "Valley"
+                                      },
+                                      {
+                                          "value":  "card_van",
+                                          "label":  "Van"
+                                      },
+                                      {
+                                          "value":  "card_wave",
+                                          "label":  "Wave"
+                                      },
+                                      {
+                                          "value":  "card_west",
+                                          "label":  "East or West"
+                                      },
+                                      {
+                                          "value":  "card_x",
+                                          "label":  "card_x"
+                                      },
+                                      {
+                                          "value":  "card_zipper",
+                                          "label":  "Zipper"
+                                      }
+                                  ]
+                    },
+    "groups":  [
+                   {
+                       "id":  "slot1",
+                       "label":  "Save slot 1",
+                       "requires":  "/tracked_progress/save_slots/1/currency",
+                       "when_absent":  "This slot is empty. Start a game in it and its fields appear here.",
+                       "fields":  [
+                                      {
+                                          "id":  "currency",
+                                          "label":  "Money",
+                                          "pointer":  "/tracked_progress/save_slots/1/currency",
+                                          "type":  "number",
+                                          "min":  0,
+                                          "max":  999999,
+                                          "label_i18n":  {
+                                                             "tr":  "Para",
+                                                             "de":  "Geld",
+                                                             "es":  "Dinero",
+                                                             "fr":  "Argent",
+                                                             "it":  "Denaro",
+                                                             "pt-BR":  "Dinheiro",
+                                                             "ru":  "Деньги",
+                                                             "pl":  "Pieniądze",
+                                                             "uk":  "Гроші",
+                                                             "ja":  "所持金",
+                                                             "ko":  "돈",
+                                                             "zh-CN":  "金钱"
+                                                         }
+                                      },
+                                      {
+                                          "id":  "mission",
+                                          "label":  "Mission",
+                                          "pointer":  "/tracked_progress/save_slots/1/mission_index",
+                                          "type":  "integer",
+                                          "min":  0,
+                                          "max":  99,
+                                          "label_i18n":  {
+                                                             "tr":  "Görev",
+                                                             "de":  "Mission",
+                                                             "es":  "Misión",
+                                                             "fr":  "Mission",
+                                                             "it":  "Missione",
+                                                             "pt-BR":  "Missão",
+                                                             "ru":  "Миссия",
+                                                             "pl":  "Misja",
+                                                             "uk":  "Місія",
+                                                             "ja":  "ミッション",
+                                                             "ko":  "미션",
+                                                             "zh-CN":  "任务"
+                                                         }
+                                      },
+                                      {
+                                          "id":  "difficulty",
+                                          "label":  "Difficulty",
+                                          "pointer":  "/tracked_progress/save_slots/1/difficulty",
+                                          "type":  "integer",
+                                          "min":  0,
+                                          "max":  9,
+                                          "label_i18n":  {
+                                                             "tr":  "Zorluk",
+                                                             "de":  "Schwierigkeit",
+                                                             "es":  "Dificultad",
+                                                             "fr":  "Difficulté",
+                                                             "it":  "Difficoltà",
+                                                             "pt-BR":  "Dificuldade",
+                                                             "ru":  "Сложность",
+                                                             "pl":  "Poziom trudności",
+                                                             "uk":  "Складність",
+                                                             "ja":  "難易度",
+                                                             "ko":  "난이도",
+                                                             "zh-CN":  "难度"
+                                                         }
+                                      },
+                                      {
+                                          "id":  "location",
+                                          "label":  "Location",
+                                          "pointer":  "/tracked_progress/save_slots/1/location",
+                                          "type":  "integer",
+                                          "min":  0,
+                                          "max":  99,
+                                          "label_i18n":  {
+                                                             "tr":  "Konum",
+                                                             "de":  "Ort",
+                                                             "es":  "Ubicación",
+                                                             "fr":  "Lieu",
+                                                             "it":  "Luogo",
+                                                             "pt-BR":  "Local",
+                                                             "ru":  "Локация",
+                                                             "pl":  "Lokacja",
+                                                             "uk":  "Локація",
+                                                             "ja":  "場所",
+                                                             "ko":  "위치",
+                                                             "zh-CN":  "地点"
+                                                         }
+                                      }
+                                  ],
+                       "lists":  [
+                                     {
+                                         "id":  "slot1_tools",
+                                         "label":  "Carried tools",
+                                         "description":  "The six slots you carry into the pit. An empty slot holds no tool.",
+                                         "pointer":  "/tracked_progress/save_slots/1/tools",
+                                         "source":  "object",
+                                         "fields":  [
+                                                        {
+                                                            "id":  "id",
+                                                            "label":  "Tool",
+                                                            "pointer":  "/id",
+                                                            "type":  "choice",
+                                                            "options_ref":  "tools",
+                                                            "label_i18n":  {
+                                                                               "tr":  "Alet",
+                                                                               "de":  "Werkzeug",
+                                                                               "es":  "Herramienta",
+                                                                               "fr":  "Outil",
+                                                                               "it":  "Strumento",
+                                                                               "pt-BR":  "Ferramenta",
+                                                                               "ru":  "Инструмент",
+                                                                               "pl":  "Narzędzie",
+                                                                               "uk":  "Інструмент",
+                                                                               "ja":  "ツール",
+                                                                               "ko":  "도구",
+                                                                               "zh-CN":  "工具"
+                                                                           }
+                                                        },
+                                                        {
+                                                            "id":  "durability",
+                                                            "label":  "Durability",
+                                                            "pointer":  "/durability",
+                                                            "type":  "integer",
+                                                            "min":  0,
+                                                            "max":  999,
+                                                            "help":  "How much use the tool has left. The game caps this per tool, so a very high number may be trimmed when the tool is next used.",
+                                                            "label_i18n":  {
+                                                                               "tr":  "Dayanıklılık",
+                                                                               "de":  "Haltbarkeit",
+                                                                               "es":  "Durabilidad",
+                                                                               "fr":  "Durabilité",
+                                                                               "it":  "Durabilità",
+                                                                               "pt-BR":  "Durabilidade",
+                                                                               "ru":  "Прочность",
+                                                                               "pl":  "Wytrzymałość",
+                                                                               "uk":  "Міцність",
+                                                                               "ja":  "耐久度",
+                                                                               "ko":  "내구도",
+                                                                               "zh-CN":  "耐久度"
+                                                                           },
+                                                            "help_i18n":  {
+                                                                              "tr":  "Aletin kalan kullanımı. Oyun bunu alete göre sınırlar, çok yüksek bir sayı alet bir sonraki kullanımda kırpılabilir.",
+                                                                              "de":  "Wie viel Nutzung dem Werkzeug bleibt. Das Spiel begrenzt das pro Werkzeug, sehr hohe Werte werden beim nächsten Einsatz womöglich gekappt.",
+                                                                              "es":  "Cuánto uso le queda a la herramienta. El juego lo limita por herramienta, así que un número muy alto puede recortarse al usarla.",
+                                                                              "fr":  "Utilisation restante de l\u0027outil. Le jeu la plafonne outil par outil : un nombre très élevé peut être réduit à la prochaine utilisation.",
+                                                                              "it":  "Quanto utilizzo resta allo strumento. Il gioco lo limita per ogni strumento, quindi un numero molto alto può essere ridotto al prossimo uso.",
+                                                                              "pt-BR":  "Quanto uso resta na ferramenta. O jogo limita isso por ferramenta, então um número muito alto pode ser cortado no próximo uso.",
+                                                                              "ru":  "Сколько использований осталось. Игра ограничивает это для каждого инструмента, поэтому очень большое число может быть урезано при следующем применении.",
+                                                                              "pl":  "Ile użyć zostało narzędziu. Gra ogranicza to dla każdego narzędzia, więc bardzo wysoka liczba może zostać przycięta przy następnym użyciu.",
+                                                                              "uk":  "Скільки використань лишилося. Гра обмежує це для кожного інструмента, тож дуже велике число може бути скорочене при наступному використанні.",
+                                                                              "ja":  "ツールの残り使用回数。ゲーム側でツールごとに上限があるため、極端に大きい値は次回使用時に切り詰められることがあります。",
+                                                                              "ko":  "도구의 남은 사용량입니다. 게임이 도구별로 상한을 두므로 아주 큰 값은 다음 사용 시 잘릴 수 있습니다.",
+                                                                              "zh-CN":  "工具剩余的使用量。游戏会按工具设定上限，因此过高的数值可能在下次使用时被削减。"
+                                                                          }
+                                                        }
+                                                    ],
+                                         "label_i18n":  {
+                                                            "tr":  "Taşınan aletler",
+                                                            "de":  "Getragene Werkzeuge",
+                                                            "es":  "Herramientas llevadas",
+                                                            "fr":  "Outils transportés",
+                                                            "it":  "Strumenti trasportati",
+                                                            "pt-BR":  "Ferramentas carregadas",
+                                                            "ru":  "Инструменты при себе",
+                                                            "pl":  "Noszone narzędzia",
+                                                            "uk":  "Інструменти при собі",
+                                                            "ja":  "所持ツール",
+                                                            "ko":  "소지 도구",
+                                                            "zh-CN":  "携带的工具"
+                                                        },
+                                         "description_i18n":  {
+                                                                  "tr":  "Çukura götürdüğün altı yuva. Boş yuvada alet yoktur.",
+                                                                  "de":  "Die sechs Plätze, die du in die Grube mitnimmst. Ein leerer Platz enthält kein Werkzeug.",
+                                                                  "es":  "Las seis ranuras que llevas al pozo. Una ranura vacía no contiene herramienta.",
+                                                                  "fr":  "Les six emplacements que vous emportez dans la fosse. Un emplacement vide ne contient aucun outil.",
+                                                                  "it":  "I sei slot che porti nella fossa. Uno slot vuoto non contiene strumenti.",
+                                                                  "pt-BR":  "Os seis slots que você leva para o poço. Um slot vazio não tem ferramenta.",
+                                                                  "ru":  "Шесть слотов, которые вы берёте в яму. Пустой слот не содержит инструмента.",
+                                                                  "pl":  "Sześć slotów, które zabierasz do dołu. Pusty slot nie zawiera narzędzia.",
+                                                                  "uk":  "Шість слотів, які ви берете в яму. Порожній слот не містить інструмента.",
+                                                                  "ja":  "穴へ持ち込む 6 つのスロット。空のスロットにはツールがありません。",
+                                                                  "ko":  "구덩이로 가져가는 6개의 슬롯입니다. 빈 슬롯에는 도구가 없습니다.",
+                                                                  "zh-CN":  "你带进坑里的六个槽位。空槽位表示没有工具。"
+                                                              }
+                                     },
+                                     {
+                                         "id":  "slot1_van_tools",
+                                         "label":  "Van tools",
+                                         "description":  "Four slots kept in the van between missions.",
+                                         "pointer":  "/tracked_progress/save_slots/1/van_tools",
+                                         "source":  "object",
+                                         "fields":  [
+                                                        {
+                                                            "id":  "id",
+                                                            "label":  "Tool",
+                                                            "pointer":  "/id",
+                                                            "type":  "choice",
+                                                            "options_ref":  "tools",
+                                                            "label_i18n":  {
+                                                                               "tr":  "Alet",
+                                                                               "de":  "Werkzeug",
+                                                                               "es":  "Herramienta",
+                                                                               "fr":  "Outil",
+                                                                               "it":  "Strumento",
+                                                                               "pt-BR":  "Ferramenta",
+                                                                               "ru":  "Инструмент",
+                                                                               "pl":  "Narzędzie",
+                                                                               "uk":  "Інструмент",
+                                                                               "ja":  "ツール",
+                                                                               "ko":  "도구",
+                                                                               "zh-CN":  "工具"
+                                                                           }
+                                                        },
+                                                        {
+                                                            "id":  "durability",
+                                                            "label":  "Durability",
+                                                            "pointer":  "/durability",
+                                                            "type":  "integer",
+                                                            "min":  0,
+                                                            "max":  999,
+                                                            "help":  "How much use the tool has left. The game caps this per tool, so a very high number may be trimmed when the tool is next used.",
+                                                            "label_i18n":  {
+                                                                               "tr":  "Dayanıklılık",
+                                                                               "de":  "Haltbarkeit",
+                                                                               "es":  "Durabilidad",
+                                                                               "fr":  "Durabilité",
+                                                                               "it":  "Durabilità",
+                                                                               "pt-BR":  "Durabilidade",
+                                                                               "ru":  "Прочность",
+                                                                               "pl":  "Wytrzymałość",
+                                                                               "uk":  "Міцність",
+                                                                               "ja":  "耐久度",
+                                                                               "ko":  "내구도",
+                                                                               "zh-CN":  "耐久度"
+                                                                           },
+                                                            "help_i18n":  {
+                                                                              "tr":  "Aletin kalan kullanımı. Oyun bunu alete göre sınırlar, çok yüksek bir sayı alet bir sonraki kullanımda kırpılabilir.",
+                                                                              "de":  "Wie viel Nutzung dem Werkzeug bleibt. Das Spiel begrenzt das pro Werkzeug, sehr hohe Werte werden beim nächsten Einsatz womöglich gekappt.",
+                                                                              "es":  "Cuánto uso le queda a la herramienta. El juego lo limita por herramienta, así que un número muy alto puede recortarse al usarla.",
+                                                                              "fr":  "Utilisation restante de l\u0027outil. Le jeu la plafonne outil par outil : un nombre très élevé peut être réduit à la prochaine utilisation.",
+                                                                              "it":  "Quanto utilizzo resta allo strumento. Il gioco lo limita per ogni strumento, quindi un numero molto alto può essere ridotto al prossimo uso.",
+                                                                              "pt-BR":  "Quanto uso resta na ferramenta. O jogo limita isso por ferramenta, então um número muito alto pode ser cortado no próximo uso.",
+                                                                              "ru":  "Сколько использований осталось. Игра ограничивает это для каждого инструмента, поэтому очень большое число может быть урезано при следующем применении.",
+                                                                              "pl":  "Ile użyć zostało narzędziu. Gra ogranicza to dla każdego narzędzia, więc bardzo wysoka liczba może zostać przycięta przy następnym użyciu.",
+                                                                              "uk":  "Скільки використань лишилося. Гра обмежує це для кожного інструмента, тож дуже велике число може бути скорочене при наступному використанні.",
+                                                                              "ja":  "ツールの残り使用回数。ゲーム側でツールごとに上限があるため、極端に大きい値は次回使用時に切り詰められることがあります。",
+                                                                              "ko":  "도구의 남은 사용량입니다. 게임이 도구별로 상한을 두므로 아주 큰 값은 다음 사용 시 잘릴 수 있습니다.",
+                                                                              "zh-CN":  "工具剩余的使用量。游戏会按工具设定上限，因此过高的数值可能在下次使用时被削减。"
+                                                                          }
+                                                        }
+                                                    ],
+                                         "label_i18n":  {
+                                                            "tr":  "Minibüsteki aletler",
+                                                            "de":  "Werkzeuge im Van",
+                                                            "es":  "Herramientas de la furgoneta",
+                                                            "fr":  "Outils du van",
+                                                            "it":  "Strumenti nel furgone",
+                                                            "pt-BR":  "Ferramentas da van",
+                                                            "ru":  "Инструменты в фургоне",
+                                                            "pl":  "Narzędzia w vanie",
+                                                            "uk":  "Інструменти у фургоні",
+                                                            "ja":  "バンのツール",
+                                                            "ko":  "밴 도구",
+                                                            "zh-CN":  "货车中的工具"
+                                                        },
+                                         "description_i18n":  {
+                                                                  "tr":  "Görevler arasında minibüste duran dört yuva.",
+                                                                  "de":  "Vier Plätze, die zwischen den Missionen im Van bleiben.",
+                                                                  "es":  "Cuatro ranuras que se quedan en la furgoneta entre misiones.",
+                                                                  "fr":  "Quatre emplacements conservés dans le van entre les missions.",
+                                                                  "it":  "Quattro slot che restano nel furgone tra una missione e l\u0027altra.",
+                                                                  "pt-BR":  "Quatro slots que ficam na van entre as missões.",
+                                                                  "ru":  "Четыре слота, которые остаются в фургоне между миссиями.",
+                                                                  "pl":  "Cztery sloty pozostające w vanie między misjami.",
+                                                                  "uk":  "Чотири слоти, що лишаються у фургоні між місіями.",
+                                                                  "ja":  "ミッションの合間にバンへ置いておく 4 つのスロット。",
+                                                                  "ko":  "미션 사이에 밴에 보관되는 4개의 슬롯입니다.",
+                                                                  "zh-CN":  "任务之间存放在货车里的四个槽位。"
+                                                              }
+                                     }
+                                 ],
+                       "label_i18n":  {
+                                          "tr":  "1. kayıt yuvası",
+                                          "de":  "Speicherplatz 1",
+                                          "es":  "Ranura de guardado 1",
+                                          "fr":  "Emplacement de sauvegarde 1",
+                                          "it":  "Slot di salvataggio 1",
+                                          "pt-BR":  "Slot de save 1",
+                                          "ru":  "Слот сохранения 1",
+                                          "pl":  "Slot zapisu 1",
+                                          "uk":  "Слот збереження 1",
+                                          "ja":  "セーブスロット 1",
+                                          "ko":  "저장 슬롯 1",
+                                          "zh-CN":  "存档位 1"
+                                      },
+                       "when_absent_i18n":  {
+                                                "tr":  "Bu yuva boş. Oyunda bu yuvada bir oyun başlat, alanlar burada görünür.",
+                                                "de":  "Dieser Platz ist leer. Starte darin ein Spiel, dann erscheinen die Felder hier.",
+                                                "es":  "Esta ranura está vacía. Empieza una partida en ella y sus campos aparecerán aquí.",
+                                                "fr":  "Cet emplacement est vide. Lancez-y une partie et ses champs apparaîtront ici.",
+                                                "it":  "Questo slot è vuoto. Inizia una partita al suo interno e i campi compariranno qui.",
+                                                "pt-BR":  "Este slot está vazio. Comece um jogo nele e os campos aparecerão aqui.",
+                                                "ru":  "Слот пуст. Начните в нём игру, и поля появятся здесь.",
+                                                "pl":  "Ten slot jest pusty. Rozpocznij w nim grę, a pola pojawią się tutaj.",
+                                                "uk":  "Слот порожній. Почніть у ньому гру, і поля з’являться тут.",
+                                                "ja":  "このスロットは空です。ここでゲームを始めると項目が表示されます。",
+                                                "ko":  "이 슬롯은 비어 있습니다. 여기서 게임을 시작하면 항목이 나타납니다.",
+                                                "zh-CN":  "此存档位为空。在其中开始游戏后，字段就会显示在这里。"
+                                            }
+                   },
+                   {
+                       "id":  "slot2",
+                       "label":  "Save slot 2",
+                       "requires":  "/tracked_progress/save_slots/2/currency",
+                       "when_absent":  "This slot is empty. Start a game in it and its fields appear here.",
+                       "fields":  [
+                                      {
+                                          "id":  "currency",
+                                          "label":  "Money",
+                                          "pointer":  "/tracked_progress/save_slots/2/currency",
+                                          "type":  "number",
+                                          "min":  0,
+                                          "max":  999999,
+                                          "label_i18n":  {
+                                                             "tr":  "Para",
+                                                             "de":  "Geld",
+                                                             "es":  "Dinero",
+                                                             "fr":  "Argent",
+                                                             "it":  "Denaro",
+                                                             "pt-BR":  "Dinheiro",
+                                                             "ru":  "Деньги",
+                                                             "pl":  "Pieniądze",
+                                                             "uk":  "Гроші",
+                                                             "ja":  "所持金",
+                                                             "ko":  "돈",
+                                                             "zh-CN":  "金钱"
+                                                         }
+                                      },
+                                      {
+                                          "id":  "mission",
+                                          "label":  "Mission",
+                                          "pointer":  "/tracked_progress/save_slots/2/mission_index",
+                                          "type":  "integer",
+                                          "min":  0,
+                                          "max":  99,
+                                          "label_i18n":  {
+                                                             "tr":  "Görev",
+                                                             "de":  "Mission",
+                                                             "es":  "Misión",
+                                                             "fr":  "Mission",
+                                                             "it":  "Missione",
+                                                             "pt-BR":  "Missão",
+                                                             "ru":  "Миссия",
+                                                             "pl":  "Misja",
+                                                             "uk":  "Місія",
+                                                             "ja":  "ミッション",
+                                                             "ko":  "미션",
+                                                             "zh-CN":  "任务"
+                                                         }
+                                      },
+                                      {
+                                          "id":  "difficulty",
+                                          "label":  "Difficulty",
+                                          "pointer":  "/tracked_progress/save_slots/2/difficulty",
+                                          "type":  "integer",
+                                          "min":  0,
+                                          "max":  9,
+                                          "label_i18n":  {
+                                                             "tr":  "Zorluk",
+                                                             "de":  "Schwierigkeit",
+                                                             "es":  "Dificultad",
+                                                             "fr":  "Difficulté",
+                                                             "it":  "Difficoltà",
+                                                             "pt-BR":  "Dificuldade",
+                                                             "ru":  "Сложность",
+                                                             "pl":  "Poziom trudności",
+                                                             "uk":  "Складність",
+                                                             "ja":  "難易度",
+                                                             "ko":  "난이도",
+                                                             "zh-CN":  "难度"
+                                                         }
+                                      },
+                                      {
+                                          "id":  "location",
+                                          "label":  "Location",
+                                          "pointer":  "/tracked_progress/save_slots/2/location",
+                                          "type":  "integer",
+                                          "min":  0,
+                                          "max":  99,
+                                          "label_i18n":  {
+                                                             "tr":  "Konum",
+                                                             "de":  "Ort",
+                                                             "es":  "Ubicación",
+                                                             "fr":  "Lieu",
+                                                             "it":  "Luogo",
+                                                             "pt-BR":  "Local",
+                                                             "ru":  "Локация",
+                                                             "pl":  "Lokacja",
+                                                             "uk":  "Локація",
+                                                             "ja":  "場所",
+                                                             "ko":  "위치",
+                                                             "zh-CN":  "地点"
+                                                         }
+                                      }
+                                  ],
+                       "lists":  [
+                                     {
+                                         "id":  "slot2_tools",
+                                         "label":  "Carried tools",
+                                         "description":  "The six slots you carry into the pit. An empty slot holds no tool.",
+                                         "pointer":  "/tracked_progress/save_slots/2/tools",
+                                         "source":  "object",
+                                         "fields":  [
+                                                        {
+                                                            "id":  "id",
+                                                            "label":  "Tool",
+                                                            "pointer":  "/id",
+                                                            "type":  "choice",
+                                                            "options_ref":  "tools",
+                                                            "label_i18n":  {
+                                                                               "tr":  "Alet",
+                                                                               "de":  "Werkzeug",
+                                                                               "es":  "Herramienta",
+                                                                               "fr":  "Outil",
+                                                                               "it":  "Strumento",
+                                                                               "pt-BR":  "Ferramenta",
+                                                                               "ru":  "Инструмент",
+                                                                               "pl":  "Narzędzie",
+                                                                               "uk":  "Інструмент",
+                                                                               "ja":  "ツール",
+                                                                               "ko":  "도구",
+                                                                               "zh-CN":  "工具"
+                                                                           }
+                                                        },
+                                                        {
+                                                            "id":  "durability",
+                                                            "label":  "Durability",
+                                                            "pointer":  "/durability",
+                                                            "type":  "integer",
+                                                            "min":  0,
+                                                            "max":  999,
+                                                            "help":  "How much use the tool has left. The game caps this per tool, so a very high number may be trimmed when the tool is next used.",
+                                                            "label_i18n":  {
+                                                                               "tr":  "Dayanıklılık",
+                                                                               "de":  "Haltbarkeit",
+                                                                               "es":  "Durabilidad",
+                                                                               "fr":  "Durabilité",
+                                                                               "it":  "Durabilità",
+                                                                               "pt-BR":  "Durabilidade",
+                                                                               "ru":  "Прочность",
+                                                                               "pl":  "Wytrzymałość",
+                                                                               "uk":  "Міцність",
+                                                                               "ja":  "耐久度",
+                                                                               "ko":  "내구도",
+                                                                               "zh-CN":  "耐久度"
+                                                                           },
+                                                            "help_i18n":  {
+                                                                              "tr":  "Aletin kalan kullanımı. Oyun bunu alete göre sınırlar, çok yüksek bir sayı alet bir sonraki kullanımda kırpılabilir.",
+                                                                              "de":  "Wie viel Nutzung dem Werkzeug bleibt. Das Spiel begrenzt das pro Werkzeug, sehr hohe Werte werden beim nächsten Einsatz womöglich gekappt.",
+                                                                              "es":  "Cuánto uso le queda a la herramienta. El juego lo limita por herramienta, así que un número muy alto puede recortarse al usarla.",
+                                                                              "fr":  "Utilisation restante de l\u0027outil. Le jeu la plafonne outil par outil : un nombre très élevé peut être réduit à la prochaine utilisation.",
+                                                                              "it":  "Quanto utilizzo resta allo strumento. Il gioco lo limita per ogni strumento, quindi un numero molto alto può essere ridotto al prossimo uso.",
+                                                                              "pt-BR":  "Quanto uso resta na ferramenta. O jogo limita isso por ferramenta, então um número muito alto pode ser cortado no próximo uso.",
+                                                                              "ru":  "Сколько использований осталось. Игра ограничивает это для каждого инструмента, поэтому очень большое число может быть урезано при следующем применении.",
+                                                                              "pl":  "Ile użyć zostało narzędziu. Gra ogranicza to dla każdego narzędzia, więc bardzo wysoka liczba może zostać przycięta przy następnym użyciu.",
+                                                                              "uk":  "Скільки використань лишилося. Гра обмежує це для кожного інструмента, тож дуже велике число може бути скорочене при наступному використанні.",
+                                                                              "ja":  "ツールの残り使用回数。ゲーム側でツールごとに上限があるため、極端に大きい値は次回使用時に切り詰められることがあります。",
+                                                                              "ko":  "도구의 남은 사용량입니다. 게임이 도구별로 상한을 두므로 아주 큰 값은 다음 사용 시 잘릴 수 있습니다.",
+                                                                              "zh-CN":  "工具剩余的使用量。游戏会按工具设定上限，因此过高的数值可能在下次使用时被削减。"
+                                                                          }
+                                                        }
+                                                    ],
+                                         "label_i18n":  {
+                                                            "tr":  "Taşınan aletler",
+                                                            "de":  "Getragene Werkzeuge",
+                                                            "es":  "Herramientas llevadas",
+                                                            "fr":  "Outils transportés",
+                                                            "it":  "Strumenti trasportati",
+                                                            "pt-BR":  "Ferramentas carregadas",
+                                                            "ru":  "Инструменты при себе",
+                                                            "pl":  "Noszone narzędzia",
+                                                            "uk":  "Інструменти при собі",
+                                                            "ja":  "所持ツール",
+                                                            "ko":  "소지 도구",
+                                                            "zh-CN":  "携带的工具"
+                                                        },
+                                         "description_i18n":  {
+                                                                  "tr":  "Çukura götürdüğün altı yuva. Boş yuvada alet yoktur.",
+                                                                  "de":  "Die sechs Plätze, die du in die Grube mitnimmst. Ein leerer Platz enthält kein Werkzeug.",
+                                                                  "es":  "Las seis ranuras que llevas al pozo. Una ranura vacía no contiene herramienta.",
+                                                                  "fr":  "Les six emplacements que vous emportez dans la fosse. Un emplacement vide ne contient aucun outil.",
+                                                                  "it":  "I sei slot che porti nella fossa. Uno slot vuoto non contiene strumenti.",
+                                                                  "pt-BR":  "Os seis slots que você leva para o poço. Um slot vazio não tem ferramenta.",
+                                                                  "ru":  "Шесть слотов, которые вы берёте в яму. Пустой слот не содержит инструмента.",
+                                                                  "pl":  "Sześć slotów, które zabierasz do dołu. Pusty slot nie zawiera narzędzia.",
+                                                                  "uk":  "Шість слотів, які ви берете в яму. Порожній слот не містить інструмента.",
+                                                                  "ja":  "穴へ持ち込む 6 つのスロット。空のスロットにはツールがありません。",
+                                                                  "ko":  "구덩이로 가져가는 6개의 슬롯입니다. 빈 슬롯에는 도구가 없습니다.",
+                                                                  "zh-CN":  "你带进坑里的六个槽位。空槽位表示没有工具。"
+                                                              }
+                                     },
+                                     {
+                                         "id":  "slot2_van_tools",
+                                         "label":  "Van tools",
+                                         "description":  "Four slots kept in the van between missions.",
+                                         "pointer":  "/tracked_progress/save_slots/2/van_tools",
+                                         "source":  "object",
+                                         "fields":  [
+                                                        {
+                                                            "id":  "id",
+                                                            "label":  "Tool",
+                                                            "pointer":  "/id",
+                                                            "type":  "choice",
+                                                            "options_ref":  "tools",
+                                                            "label_i18n":  {
+                                                                               "tr":  "Alet",
+                                                                               "de":  "Werkzeug",
+                                                                               "es":  "Herramienta",
+                                                                               "fr":  "Outil",
+                                                                               "it":  "Strumento",
+                                                                               "pt-BR":  "Ferramenta",
+                                                                               "ru":  "Инструмент",
+                                                                               "pl":  "Narzędzie",
+                                                                               "uk":  "Інструмент",
+                                                                               "ja":  "ツール",
+                                                                               "ko":  "도구",
+                                                                               "zh-CN":  "工具"
+                                                                           }
+                                                        },
+                                                        {
+                                                            "id":  "durability",
+                                                            "label":  "Durability",
+                                                            "pointer":  "/durability",
+                                                            "type":  "integer",
+                                                            "min":  0,
+                                                            "max":  999,
+                                                            "help":  "How much use the tool has left. The game caps this per tool, so a very high number may be trimmed when the tool is next used.",
+                                                            "label_i18n":  {
+                                                                               "tr":  "Dayanıklılık",
+                                                                               "de":  "Haltbarkeit",
+                                                                               "es":  "Durabilidad",
+                                                                               "fr":  "Durabilité",
+                                                                               "it":  "Durabilità",
+                                                                               "pt-BR":  "Durabilidade",
+                                                                               "ru":  "Прочность",
+                                                                               "pl":  "Wytrzymałość",
+                                                                               "uk":  "Міцність",
+                                                                               "ja":  "耐久度",
+                                                                               "ko":  "내구도",
+                                                                               "zh-CN":  "耐久度"
+                                                                           },
+                                                            "help_i18n":  {
+                                                                              "tr":  "Aletin kalan kullanımı. Oyun bunu alete göre sınırlar, çok yüksek bir sayı alet bir sonraki kullanımda kırpılabilir.",
+                                                                              "de":  "Wie viel Nutzung dem Werkzeug bleibt. Das Spiel begrenzt das pro Werkzeug, sehr hohe Werte werden beim nächsten Einsatz womöglich gekappt.",
+                                                                              "es":  "Cuánto uso le queda a la herramienta. El juego lo limita por herramienta, así que un número muy alto puede recortarse al usarla.",
+                                                                              "fr":  "Utilisation restante de l\u0027outil. Le jeu la plafonne outil par outil : un nombre très élevé peut être réduit à la prochaine utilisation.",
+                                                                              "it":  "Quanto utilizzo resta allo strumento. Il gioco lo limita per ogni strumento, quindi un numero molto alto può essere ridotto al prossimo uso.",
+                                                                              "pt-BR":  "Quanto uso resta na ferramenta. O jogo limita isso por ferramenta, então um número muito alto pode ser cortado no próximo uso.",
+                                                                              "ru":  "Сколько использований осталось. Игра ограничивает это для каждого инструмента, поэтому очень большое число может быть урезано при следующем применении.",
+                                                                              "pl":  "Ile użyć zostało narzędziu. Gra ogranicza to dla każdego narzędzia, więc bardzo wysoka liczba może zostać przycięta przy następnym użyciu.",
+                                                                              "uk":  "Скільки використань лишилося. Гра обмежує це для кожного інструмента, тож дуже велике число може бути скорочене при наступному використанні.",
+                                                                              "ja":  "ツールの残り使用回数。ゲーム側でツールごとに上限があるため、極端に大きい値は次回使用時に切り詰められることがあります。",
+                                                                              "ko":  "도구의 남은 사용량입니다. 게임이 도구별로 상한을 두므로 아주 큰 값은 다음 사용 시 잘릴 수 있습니다.",
+                                                                              "zh-CN":  "工具剩余的使用量。游戏会按工具设定上限，因此过高的数值可能在下次使用时被削减。"
+                                                                          }
+                                                        }
+                                                    ],
+                                         "label_i18n":  {
+                                                            "tr":  "Minibüsteki aletler",
+                                                            "de":  "Werkzeuge im Van",
+                                                            "es":  "Herramientas de la furgoneta",
+                                                            "fr":  "Outils du van",
+                                                            "it":  "Strumenti nel furgone",
+                                                            "pt-BR":  "Ferramentas da van",
+                                                            "ru":  "Инструменты в фургоне",
+                                                            "pl":  "Narzędzia w vanie",
+                                                            "uk":  "Інструменти у фургоні",
+                                                            "ja":  "バンのツール",
+                                                            "ko":  "밴 도구",
+                                                            "zh-CN":  "货车中的工具"
+                                                        },
+                                         "description_i18n":  {
+                                                                  "tr":  "Görevler arasında minibüste duran dört yuva.",
+                                                                  "de":  "Vier Plätze, die zwischen den Missionen im Van bleiben.",
+                                                                  "es":  "Cuatro ranuras que se quedan en la furgoneta entre misiones.",
+                                                                  "fr":  "Quatre emplacements conservés dans le van entre les missions.",
+                                                                  "it":  "Quattro slot che restano nel furgone tra una missione e l\u0027altra.",
+                                                                  "pt-BR":  "Quatro slots que ficam na van entre as missões.",
+                                                                  "ru":  "Четыре слота, которые остаются в фургоне между миссиями.",
+                                                                  "pl":  "Cztery sloty pozostające w vanie między misjami.",
+                                                                  "uk":  "Чотири слоти, що лишаються у фургоні між місіями.",
+                                                                  "ja":  "ミッションの合間にバンへ置いておく 4 つのスロット。",
+                                                                  "ko":  "미션 사이에 밴에 보관되는 4개의 슬롯입니다.",
+                                                                  "zh-CN":  "任务之间存放在货车里的四个槽位。"
+                                                              }
+                                     }
+                                 ],
+                       "label_i18n":  {
+                                          "tr":  "2. kayıt yuvası",
+                                          "de":  "Speicherplatz 2",
+                                          "es":  "Ranura de guardado 2",
+                                          "fr":  "Emplacement de sauvegarde 2",
+                                          "it":  "Slot di salvataggio 2",
+                                          "pt-BR":  "Slot de save 2",
+                                          "ru":  "Слот сохранения 2",
+                                          "pl":  "Slot zapisu 2",
+                                          "uk":  "Слот збереження 2",
+                                          "ja":  "セーブスロット 2",
+                                          "ko":  "저장 슬롯 2",
+                                          "zh-CN":  "存档位 2"
+                                      },
+                       "when_absent_i18n":  {
+                                                "tr":  "Bu yuva boş. Oyunda bu yuvada bir oyun başlat, alanlar burada görünür.",
+                                                "de":  "Dieser Platz ist leer. Starte darin ein Spiel, dann erscheinen die Felder hier.",
+                                                "es":  "Esta ranura está vacía. Empieza una partida en ella y sus campos aparecerán aquí.",
+                                                "fr":  "Cet emplacement est vide. Lancez-y une partie et ses champs apparaîtront ici.",
+                                                "it":  "Questo slot è vuoto. Inizia una partita al suo interno e i campi compariranno qui.",
+                                                "pt-BR":  "Este slot está vazio. Comece um jogo nele e os campos aparecerão aqui.",
+                                                "ru":  "Слот пуст. Начните в нём игру, и поля появятся здесь.",
+                                                "pl":  "Ten slot jest pusty. Rozpocznij w nim grę, a pola pojawią się tutaj.",
+                                                "uk":  "Слот порожній. Почніть у ньому гру, і поля з’являться тут.",
+                                                "ja":  "このスロットは空です。ここでゲームを始めると項目が表示されます。",
+                                                "ko":  "이 슬롯은 비어 있습니다. 여기서 게임을 시작하면 항목이 나타납니다.",
+                                                "zh-CN":  "此存档位为空。在其中开始游戏后，字段就会显示在这里。"
+                                            }
+                   },
+                   {
+                       "id":  "slot3",
+                       "label":  "Save slot 3",
+                       "requires":  "/tracked_progress/save_slots/3/currency",
+                       "when_absent":  "This slot is empty. Start a game in it and its fields appear here.",
+                       "fields":  [
+                                      {
+                                          "id":  "currency",
+                                          "label":  "Money",
+                                          "pointer":  "/tracked_progress/save_slots/3/currency",
+                                          "type":  "number",
+                                          "min":  0,
+                                          "max":  999999,
+                                          "label_i18n":  {
+                                                             "tr":  "Para",
+                                                             "de":  "Geld",
+                                                             "es":  "Dinero",
+                                                             "fr":  "Argent",
+                                                             "it":  "Denaro",
+                                                             "pt-BR":  "Dinheiro",
+                                                             "ru":  "Деньги",
+                                                             "pl":  "Pieniądze",
+                                                             "uk":  "Гроші",
+                                                             "ja":  "所持金",
+                                                             "ko":  "돈",
+                                                             "zh-CN":  "金钱"
+                                                         }
+                                      },
+                                      {
+                                          "id":  "mission",
+                                          "label":  "Mission",
+                                          "pointer":  "/tracked_progress/save_slots/3/mission_index",
+                                          "type":  "integer",
+                                          "min":  0,
+                                          "max":  99,
+                                          "label_i18n":  {
+                                                             "tr":  "Görev",
+                                                             "de":  "Mission",
+                                                             "es":  "Misión",
+                                                             "fr":  "Mission",
+                                                             "it":  "Missione",
+                                                             "pt-BR":  "Missão",
+                                                             "ru":  "Миссия",
+                                                             "pl":  "Misja",
+                                                             "uk":  "Місія",
+                                                             "ja":  "ミッション",
+                                                             "ko":  "미션",
+                                                             "zh-CN":  "任务"
+                                                         }
+                                      },
+                                      {
+                                          "id":  "difficulty",
+                                          "label":  "Difficulty",
+                                          "pointer":  "/tracked_progress/save_slots/3/difficulty",
+                                          "type":  "integer",
+                                          "min":  0,
+                                          "max":  9,
+                                          "label_i18n":  {
+                                                             "tr":  "Zorluk",
+                                                             "de":  "Schwierigkeit",
+                                                             "es":  "Dificultad",
+                                                             "fr":  "Difficulté",
+                                                             "it":  "Difficoltà",
+                                                             "pt-BR":  "Dificuldade",
+                                                             "ru":  "Сложность",
+                                                             "pl":  "Poziom trudności",
+                                                             "uk":  "Складність",
+                                                             "ja":  "難易度",
+                                                             "ko":  "난이도",
+                                                             "zh-CN":  "难度"
+                                                         }
+                                      },
+                                      {
+                                          "id":  "location",
+                                          "label":  "Location",
+                                          "pointer":  "/tracked_progress/save_slots/3/location",
+                                          "type":  "integer",
+                                          "min":  0,
+                                          "max":  99,
+                                          "label_i18n":  {
+                                                             "tr":  "Konum",
+                                                             "de":  "Ort",
+                                                             "es":  "Ubicación",
+                                                             "fr":  "Lieu",
+                                                             "it":  "Luogo",
+                                                             "pt-BR":  "Local",
+                                                             "ru":  "Локация",
+                                                             "pl":  "Lokacja",
+                                                             "uk":  "Локація",
+                                                             "ja":  "場所",
+                                                             "ko":  "위치",
+                                                             "zh-CN":  "地点"
+                                                         }
+                                      }
+                                  ],
+                       "lists":  [
+                                     {
+                                         "id":  "slot3_tools",
+                                         "label":  "Carried tools",
+                                         "description":  "The six slots you carry into the pit. An empty slot holds no tool.",
+                                         "pointer":  "/tracked_progress/save_slots/3/tools",
+                                         "source":  "object",
+                                         "fields":  [
+                                                        {
+                                                            "id":  "id",
+                                                            "label":  "Tool",
+                                                            "pointer":  "/id",
+                                                            "type":  "choice",
+                                                            "options_ref":  "tools",
+                                                            "label_i18n":  {
+                                                                               "tr":  "Alet",
+                                                                               "de":  "Werkzeug",
+                                                                               "es":  "Herramienta",
+                                                                               "fr":  "Outil",
+                                                                               "it":  "Strumento",
+                                                                               "pt-BR":  "Ferramenta",
+                                                                               "ru":  "Инструмент",
+                                                                               "pl":  "Narzędzie",
+                                                                               "uk":  "Інструмент",
+                                                                               "ja":  "ツール",
+                                                                               "ko":  "도구",
+                                                                               "zh-CN":  "工具"
+                                                                           }
+                                                        },
+                                                        {
+                                                            "id":  "durability",
+                                                            "label":  "Durability",
+                                                            "pointer":  "/durability",
+                                                            "type":  "integer",
+                                                            "min":  0,
+                                                            "max":  999,
+                                                            "help":  "How much use the tool has left. The game caps this per tool, so a very high number may be trimmed when the tool is next used.",
+                                                            "label_i18n":  {
+                                                                               "tr":  "Dayanıklılık",
+                                                                               "de":  "Haltbarkeit",
+                                                                               "es":  "Durabilidad",
+                                                                               "fr":  "Durabilité",
+                                                                               "it":  "Durabilità",
+                                                                               "pt-BR":  "Durabilidade",
+                                                                               "ru":  "Прочность",
+                                                                               "pl":  "Wytrzymałość",
+                                                                               "uk":  "Міцність",
+                                                                               "ja":  "耐久度",
+                                                                               "ko":  "내구도",
+                                                                               "zh-CN":  "耐久度"
+                                                                           },
+                                                            "help_i18n":  {
+                                                                              "tr":  "Aletin kalan kullanımı. Oyun bunu alete göre sınırlar, çok yüksek bir sayı alet bir sonraki kullanımda kırpılabilir.",
+                                                                              "de":  "Wie viel Nutzung dem Werkzeug bleibt. Das Spiel begrenzt das pro Werkzeug, sehr hohe Werte werden beim nächsten Einsatz womöglich gekappt.",
+                                                                              "es":  "Cuánto uso le queda a la herramienta. El juego lo limita por herramienta, así que un número muy alto puede recortarse al usarla.",
+                                                                              "fr":  "Utilisation restante de l\u0027outil. Le jeu la plafonne outil par outil : un nombre très élevé peut être réduit à la prochaine utilisation.",
+                                                                              "it":  "Quanto utilizzo resta allo strumento. Il gioco lo limita per ogni strumento, quindi un numero molto alto può essere ridotto al prossimo uso.",
+                                                                              "pt-BR":  "Quanto uso resta na ferramenta. O jogo limita isso por ferramenta, então um número muito alto pode ser cortado no próximo uso.",
+                                                                              "ru":  "Сколько использований осталось. Игра ограничивает это для каждого инструмента, поэтому очень большое число может быть урезано при следующем применении.",
+                                                                              "pl":  "Ile użyć zostało narzędziu. Gra ogranicza to dla każdego narzędzia, więc bardzo wysoka liczba może zostać przycięta przy następnym użyciu.",
+                                                                              "uk":  "Скільки використань лишилося. Гра обмежує це для кожного інструмента, тож дуже велике число може бути скорочене при наступному використанні.",
+                                                                              "ja":  "ツールの残り使用回数。ゲーム側でツールごとに上限があるため、極端に大きい値は次回使用時に切り詰められることがあります。",
+                                                                              "ko":  "도구의 남은 사용량입니다. 게임이 도구별로 상한을 두므로 아주 큰 값은 다음 사용 시 잘릴 수 있습니다.",
+                                                                              "zh-CN":  "工具剩余的使用量。游戏会按工具设定上限，因此过高的数值可能在下次使用时被削减。"
+                                                                          }
+                                                        }
+                                                    ],
+                                         "label_i18n":  {
+                                                            "tr":  "Taşınan aletler",
+                                                            "de":  "Getragene Werkzeuge",
+                                                            "es":  "Herramientas llevadas",
+                                                            "fr":  "Outils transportés",
+                                                            "it":  "Strumenti trasportati",
+                                                            "pt-BR":  "Ferramentas carregadas",
+                                                            "ru":  "Инструменты при себе",
+                                                            "pl":  "Noszone narzędzia",
+                                                            "uk":  "Інструменти при собі",
+                                                            "ja":  "所持ツール",
+                                                            "ko":  "소지 도구",
+                                                            "zh-CN":  "携带的工具"
+                                                        },
+                                         "description_i18n":  {
+                                                                  "tr":  "Çukura götürdüğün altı yuva. Boş yuvada alet yoktur.",
+                                                                  "de":  "Die sechs Plätze, die du in die Grube mitnimmst. Ein leerer Platz enthält kein Werkzeug.",
+                                                                  "es":  "Las seis ranuras que llevas al pozo. Una ranura vacía no contiene herramienta.",
+                                                                  "fr":  "Les six emplacements que vous emportez dans la fosse. Un emplacement vide ne contient aucun outil.",
+                                                                  "it":  "I sei slot che porti nella fossa. Uno slot vuoto non contiene strumenti.",
+                                                                  "pt-BR":  "Os seis slots que você leva para o poço. Um slot vazio não tem ferramenta.",
+                                                                  "ru":  "Шесть слотов, которые вы берёте в яму. Пустой слот не содержит инструмента.",
+                                                                  "pl":  "Sześć slotów, które zabierasz do dołu. Pusty slot nie zawiera narzędzia.",
+                                                                  "uk":  "Шість слотів, які ви берете в яму. Порожній слот не містить інструмента.",
+                                                                  "ja":  "穴へ持ち込む 6 つのスロット。空のスロットにはツールがありません。",
+                                                                  "ko":  "구덩이로 가져가는 6개의 슬롯입니다. 빈 슬롯에는 도구가 없습니다.",
+                                                                  "zh-CN":  "你带进坑里的六个槽位。空槽位表示没有工具。"
+                                                              }
+                                     },
+                                     {
+                                         "id":  "slot3_van_tools",
+                                         "label":  "Van tools",
+                                         "description":  "Four slots kept in the van between missions.",
+                                         "pointer":  "/tracked_progress/save_slots/3/van_tools",
+                                         "source":  "object",
+                                         "fields":  [
+                                                        {
+                                                            "id":  "id",
+                                                            "label":  "Tool",
+                                                            "pointer":  "/id",
+                                                            "type":  "choice",
+                                                            "options_ref":  "tools",
+                                                            "label_i18n":  {
+                                                                               "tr":  "Alet",
+                                                                               "de":  "Werkzeug",
+                                                                               "es":  "Herramienta",
+                                                                               "fr":  "Outil",
+                                                                               "it":  "Strumento",
+                                                                               "pt-BR":  "Ferramenta",
+                                                                               "ru":  "Инструмент",
+                                                                               "pl":  "Narzędzie",
+                                                                               "uk":  "Інструмент",
+                                                                               "ja":  "ツール",
+                                                                               "ko":  "도구",
+                                                                               "zh-CN":  "工具"
+                                                                           }
+                                                        },
+                                                        {
+                                                            "id":  "durability",
+                                                            "label":  "Durability",
+                                                            "pointer":  "/durability",
+                                                            "type":  "integer",
+                                                            "min":  0,
+                                                            "max":  999,
+                                                            "help":  "How much use the tool has left. The game caps this per tool, so a very high number may be trimmed when the tool is next used.",
+                                                            "label_i18n":  {
+                                                                               "tr":  "Dayanıklılık",
+                                                                               "de":  "Haltbarkeit",
+                                                                               "es":  "Durabilidad",
+                                                                               "fr":  "Durabilité",
+                                                                               "it":  "Durabilità",
+                                                                               "pt-BR":  "Durabilidade",
+                                                                               "ru":  "Прочность",
+                                                                               "pl":  "Wytrzymałość",
+                                                                               "uk":  "Міцність",
+                                                                               "ja":  "耐久度",
+                                                                               "ko":  "내구도",
+                                                                               "zh-CN":  "耐久度"
+                                                                           },
+                                                            "help_i18n":  {
+                                                                              "tr":  "Aletin kalan kullanımı. Oyun bunu alete göre sınırlar, çok yüksek bir sayı alet bir sonraki kullanımda kırpılabilir.",
+                                                                              "de":  "Wie viel Nutzung dem Werkzeug bleibt. Das Spiel begrenzt das pro Werkzeug, sehr hohe Werte werden beim nächsten Einsatz womöglich gekappt.",
+                                                                              "es":  "Cuánto uso le queda a la herramienta. El juego lo limita por herramienta, así que un número muy alto puede recortarse al usarla.",
+                                                                              "fr":  "Utilisation restante de l\u0027outil. Le jeu la plafonne outil par outil : un nombre très élevé peut être réduit à la prochaine utilisation.",
+                                                                              "it":  "Quanto utilizzo resta allo strumento. Il gioco lo limita per ogni strumento, quindi un numero molto alto può essere ridotto al prossimo uso.",
+                                                                              "pt-BR":  "Quanto uso resta na ferramenta. O jogo limita isso por ferramenta, então um número muito alto pode ser cortado no próximo uso.",
+                                                                              "ru":  "Сколько использований осталось. Игра ограничивает это для каждого инструмента, поэтому очень большое число может быть урезано при следующем применении.",
+                                                                              "pl":  "Ile użyć zostało narzędziu. Gra ogranicza to dla każdego narzędzia, więc bardzo wysoka liczba może zostać przycięta przy następnym użyciu.",
+                                                                              "uk":  "Скільки використань лишилося. Гра обмежує це для кожного інструмента, тож дуже велике число може бути скорочене при наступному використанні.",
+                                                                              "ja":  "ツールの残り使用回数。ゲーム側でツールごとに上限があるため、極端に大きい値は次回使用時に切り詰められることがあります。",
+                                                                              "ko":  "도구의 남은 사용량입니다. 게임이 도구별로 상한을 두므로 아주 큰 값은 다음 사용 시 잘릴 수 있습니다.",
+                                                                              "zh-CN":  "工具剩余的使用量。游戏会按工具设定上限，因此过高的数值可能在下次使用时被削减。"
+                                                                          }
+                                                        }
+                                                    ],
+                                         "label_i18n":  {
+                                                            "tr":  "Minibüsteki aletler",
+                                                            "de":  "Werkzeuge im Van",
+                                                            "es":  "Herramientas de la furgoneta",
+                                                            "fr":  "Outils du van",
+                                                            "it":  "Strumenti nel furgone",
+                                                            "pt-BR":  "Ferramentas da van",
+                                                            "ru":  "Инструменты в фургоне",
+                                                            "pl":  "Narzędzia w vanie",
+                                                            "uk":  "Інструменти у фургоні",
+                                                            "ja":  "バンのツール",
+                                                            "ko":  "밴 도구",
+                                                            "zh-CN":  "货车中的工具"
+                                                        },
+                                         "description_i18n":  {
+                                                                  "tr":  "Görevler arasında minibüste duran dört yuva.",
+                                                                  "de":  "Vier Plätze, die zwischen den Missionen im Van bleiben.",
+                                                                  "es":  "Cuatro ranuras que se quedan en la furgoneta entre misiones.",
+                                                                  "fr":  "Quatre emplacements conservés dans le van entre les missions.",
+                                                                  "it":  "Quattro slot che restano nel furgone tra una missione e l\u0027altra.",
+                                                                  "pt-BR":  "Quatro slots que ficam na van entre as missões.",
+                                                                  "ru":  "Четыре слота, которые остаются в фургоне между миссиями.",
+                                                                  "pl":  "Cztery sloty pozostające w vanie między misjami.",
+                                                                  "uk":  "Чотири слоти, що лишаються у фургоні між місіями.",
+                                                                  "ja":  "ミッションの合間にバンへ置いておく 4 つのスロット。",
+                                                                  "ko":  "미션 사이에 밴에 보관되는 4개의 슬롯입니다.",
+                                                                  "zh-CN":  "任务之间存放在货车里的四个槽位。"
+                                                              }
+                                     }
+                                 ],
+                       "label_i18n":  {
+                                          "tr":  "3. kayıt yuvası",
+                                          "de":  "Speicherplatz 3",
+                                          "es":  "Ranura de guardado 3",
+                                          "fr":  "Emplacement de sauvegarde 3",
+                                          "it":  "Slot di salvataggio 3",
+                                          "pt-BR":  "Slot de save 3",
+                                          "ru":  "Слот сохранения 3",
+                                          "pl":  "Slot zapisu 3",
+                                          "uk":  "Слот збереження 3",
+                                          "ja":  "セーブスロット 3",
+                                          "ko":  "저장 슬롯 3",
+                                          "zh-CN":  "存档位 3"
+                                      },
+                       "when_absent_i18n":  {
+                                                "tr":  "Bu yuva boş. Oyunda bu yuvada bir oyun başlat, alanlar burada görünür.",
+                                                "de":  "Dieser Platz ist leer. Starte darin ein Spiel, dann erscheinen die Felder hier.",
+                                                "es":  "Esta ranura está vacía. Empieza una partida en ella y sus campos aparecerán aquí.",
+                                                "fr":  "Cet emplacement est vide. Lancez-y une partie et ses champs apparaîtront ici.",
+                                                "it":  "Questo slot è vuoto. Inizia una partita al suo interno e i campi compariranno qui.",
+                                                "pt-BR":  "Este slot está vazio. Comece um jogo nele e os campos aparecerão aqui.",
+                                                "ru":  "Слот пуст. Начните в нём игру, и поля появятся здесь.",
+                                                "pl":  "Ten slot jest pusty. Rozpocznij w nim grę, a pola pojawią się tutaj.",
+                                                "uk":  "Слот порожній. Почніть у ньому гру, і поля з’являться тут.",
+                                                "ja":  "このスロットは空です。ここでゲームを始めると項目が表示されます。",
+                                                "ko":  "이 슬롯은 비어 있습니다. 여기서 게임을 시작하면 항목이 나타납니다.",
+                                                "zh-CN":  "此存档位为空。在其中开始游戏后，字段就会显示在这里。"
+                                            }
+                   },
+                   {
+                       "id":  "tracking",
+                       "label":  "Tracking",
+                       "requires":  "/tracking/mushrooms_collected",
+                       "fields":  [
+                                      {
+                                          "id":  "mushrooms",
+                                          "label":  "Mushrooms collected",
+                                          "pointer":  "/tracking/mushrooms_collected",
+                                          "type":  "number",
+                                          "min":  0,
+                                          "max":  999999,
+                                          "label_i18n":  {
+                                                             "tr":  "Toplanan mantar",
+                                                             "de":  "Gesammelte Pilze",
+                                                             "es":  "Setas recogidas",
+                                                             "fr":  "Champignons ramassés",
+                                                             "it":  "Funghi raccolti",
+                                                             "pt-BR":  "Cogumelos coletados",
+                                                             "ru":  "Собрано грибов",
+                                                             "pl":  "Zebrane grzyby",
+                                                             "uk":  "Зібрано грибів",
+                                                             "ja":  "採取したキノコ",
+                                                             "ko":  "채집한 버섯",
+                                                             "zh-CN":  "已收集的蘑菇"
+                                                         }
+                                      },
+                                      {
+                                          "id":  "version",
+                                          "label":  "Save version",
+                                          "pointer":  "/version",
+                                          "type":  "number",
+                                          "read_only":  true,
+                                          "help":  "Written by the game. Shown so you can tell whether this plugin still matches your copy.",
+                                          "label_i18n":  {
+                                                             "tr":  "Kayıt sürümü",
+                                                             "de":  "Speicherversion",
+                                                             "es":  "Versión del guardado",
+                                                             "fr":  "Version de la sauvegarde",
+                                                             "it":  "Versione del salvataggio",
+                                                             "pt-BR":  "Versão do save",
+                                                             "ru":  "Версия сохранения",
+                                                             "pl":  "Wersja zapisu",
+                                                             "uk":  "Версія збереження",
+                                                             "ja":  "セーブのバージョン",
+                                                             "ko":  "저장 버전",
+                                                             "zh-CN":  "存档版本"
+                                                         },
+                                          "help_i18n":  {
+                                                            "tr":  "Oyunun kendisi yazar. Bu eklentinin senin sürümünle hâlâ uyuştuğunu görebilesin diye gösteriliyor.",
+                                                            "de":  "Vom Spiel geschrieben. Wird angezeigt, damit du erkennst, ob dieses Plugin noch zu deiner Version passt.",
+                                                            "es":  "Lo escribe el juego. Se muestra para que sepas si este complemento sigue coincidiendo con tu copia.",
+                                                            "fr":  "Écrit par le jeu. Affiché pour vous permettre de voir si ce plugin correspond toujours à votre version.",
+                                                            "it":  "Scritto dal gioco. Mostrato per farti capire se questo plugin corrisponde ancora alla tua copia.",
+                                                            "pt-BR":  "Escrito pelo jogo. Mostrado para você saber se este plugin ainda corresponde à sua cópia.",
+                                                            "ru":  "Записывается самой игрой. Показано, чтобы вы видели, подходит ли плагин к вашей версии.",
+                                                            "pl":  "Zapisywane przez grę. Pokazane, byś wiedział, czy ta wtyczka wciąż pasuje do twojej kopii.",
+                                                            "uk":  "Записує сама гра. Показано, щоб ви бачили, чи плагін ще відповідає вашій копії.",
+                                                            "ja":  "ゲーム自身が書き込む値です。このプラグインがお使いのバージョンに合っているか判断できるよう表示しています。",
+                                                            "ko":  "게임이 직접 기록하는 값입니다. 이 플러그인이 사용 중인 버전과 아직 맞는지 알 수 있도록 표시합니다.",
+                                                            "zh-CN":  "由游戏写入。显示出来是为了让你判断此插件是否仍与你的版本相符。"
+                                                        }
+                                      }
+                                  ],
+                       "label_i18n":  {
+                                          "tr":  "Sayaçlar",
+                                          "de":  "Zähler",
+                                          "es":  "Contadores",
+                                          "fr":  "Compteurs",
+                                          "it":  "Contatori",
+                                          "pt-BR":  "Contadores",
+                                          "ru":  "Счётчики",
+                                          "pl":  "Liczniki",
+                                          "uk":  "Лічильники",
+                                          "ja":  "カウンター",
+                                          "ko":  "카운터",
+                                          "zh-CN":  "计数"
+                                      }
+                   },
+                   {
+                       "id":  "memories",
+                       "label":  "Character memories",
+                       "requires":  "/death_amount",
+                       "fields":  [
+                                      {
+                                          "id":  "deaths",
+                                          "label":  "Deaths",
+                                          "pointer":  "/death_amount",
+                                          "type":  "integer",
+                                          "min":  0,
+                                          "max":  999999,
+                                          "label_i18n":  {
+                                                             "tr":  "Ölüm sayısı",
+                                                             "de":  "Tode",
+                                                             "es":  "Muertes",
+                                                             "fr":  "Morts",
+                                                             "it":  "Morti",
+                                                             "pt-BR":  "Mortes",
+                                                             "ru":  "Смерти",
+                                                             "pl":  "Zgony",
+                                                             "uk":  "Смерті",
+                                                             "ja":  "死亡回数",
+                                                             "ko":  "사망 횟수",
+                                                             "zh-CN":  "死亡次数"
+                                                         }
+                                      },
+                                      {
+                                          "id":  "death_dialogue",
+                                          "label":  "Death dialogue index",
+                                          "pointer":  "/death_amount_dialogue_index",
+                                          "type":  "integer",
+                                          "min":  0,
+                                          "max":  999,
+                                          "label_i18n":  {
+                                                             "tr":  "Ölüm diyaloğu sırası",
+                                                             "de":  "Index des Todesdialogs",
+                                                             "es":  "Índice del diálogo de muerte",
+                                                             "fr":  "Index du dialogue de mort",
+                                                             "it":  "Indice del dialogo di morte",
+                                                             "pt-BR":  "Índice do diálogo de morte",
+                                                             "ru":  "Индекс диалога смерти",
+                                                             "pl":  "Indeks dialogu śmierci",
+                                                             "uk":  "Індекс діалогу смерті",
+                                                             "ja":  "死亡時セリフの番号",
+                                                             "ko":  "사망 대사 인덱스",
+                                                             "zh-CN":  "死亡对话序号"
+                                                         }
+                                      },
+                                      {
+                                          "id":  "death_cards",
+                                          "label":  "Death card encounters",
+                                          "pointer":  "/death_card_encounters",
+                                          "type":  "integer",
+                                          "min":  0,
+                                          "max":  999,
+                                          "label_i18n":  {
+                                                             "tr":  "Ölüm kartı karşılaşmaları",
+                                                             "de":  "Begegnungen mit der Todeskarte",
+                                                             "es":  "Encuentros con la carta de la muerte",
+                                                             "fr":  "Rencontres avec la carte de la mort",
+                                                             "it":  "Incontri con la carta della morte",
+                                                             "pt-BR":  "Encontros com a carta da morte",
+                                                             "ru":  "Встречи с картой смерти",
+                                                             "pl":  "Spotkania z kartą śmierci",
+                                                             "uk":  "Зустрічі з картою смерті",
+                                                             "ja":  "デスカードとの遭遇回数",
+                                                             "ko":  "죽음 카드 조우 횟수",
+                                                             "zh-CN":  "死亡牌遭遇次数"
+                                                         }
+                                      },
+                                      {
+                                          "id":  "talked",
+                                          "label":  "Has talked with the Cardmaster",
+                                          "pointer":  "/has_talked_with_cardmaster",
+                                          "type":  "boolean",
+                                          "label_i18n":  {
+                                                             "tr":  "Cardmaster ile konuşuldu",
+                                                             "de":  "Hat mit dem Cardmaster gesprochen",
+                                                             "es":  "Ha hablado con el Cardmaster",
+                                                             "fr":  "A parlé au Cardmaster",
+                                                             "it":  "Ha parlato con il Cardmaster",
+                                                             "pt-BR":  "Já falou com o Cardmaster",
+                                                             "ru":  "Говорил с Cardmaster",
+                                                             "pl":  "Rozmawiał z Cardmasterem",
+                                                             "uk":  "Розмовляв із Cardmaster",
+                                                             "ja":  "Cardmaster と会話済み",
+                                                             "ko":  "Cardmaster와 대화함",
+                                                             "zh-CN":  "已与 Cardmaster 交谈"
+                                                         }
+                                      }
+                                  ],
+                       "lists":  [
+                                     {
+                                         "id":  "cardmaster",
+                                         "label":  "Cardmaster memories",
+                                         "description":  "Four flags the game sets as its conversation with you progresses.",
+                                         "pointer":  "/cardmaster",
+                                         "source":  "object",
+                                         "entry":  {
+                                                       "id":  "value",
+                                                       "label":  "Value",
+                                                       "pointer":  "",
+                                                       "type":  "integer",
+                                                       "min":  0,
+                                                       "max":  99,
+                                                       "label_i18n":  {
+                                                                          "tr":  "Değer",
+                                                                          "de":  "Wert",
+                                                                          "es":  "Valor",
+                                                                          "fr":  "Valeur",
+                                                                          "it":  "Valore",
+                                                                          "pt-BR":  "Valor",
+                                                                          "ru":  "Значение",
+                                                                          "pl":  "Wartość",
+                                                                          "uk":  "Значення",
+                                                                          "ja":  "値",
+                                                                          "ko":  "값",
+                                                                          "zh-CN":  "数值"
+                                                                      }
+                                                   },
+                                         "label_i18n":  {
+                                                            "tr":  "Cardmaster anıları",
+                                                            "de":  "Erinnerungen des Cardmasters",
+                                                            "es":  "Recuerdos del Cardmaster",
+                                                            "fr":  "Souvenirs du Cardmaster",
+                                                            "it":  "Ricordi del Cardmaster",
+                                                            "pt-BR":  "Memórias do Cardmaster",
+                                                            "ru":  "Воспоминания Cardmaster",
+                                                            "pl":  "Wspomnienia Cardmastera",
+                                                            "uk":  "Спогади Cardmaster",
+                                                            "ja":  "Cardmaster の記憶",
+                                                            "ko":  "Cardmaster의 기억",
+                                                            "zh-CN":  "Cardmaster 的记忆"
+                                                        },
+                                         "description_i18n":  {
+                                                                  "tr":  "Oyunun, seninle konuşması ilerledikçe koyduğu dört bayrak.",
+                                                                  "de":  "Vier Marker, die das Spiel setzt, während das Gespräch mit dir fortschreitet.",
+                                                                  "es":  "Cuatro marcas que el juego activa a medida que avanza su conversación contigo.",
+                                                                  "fr":  "Quatre indicateurs que le jeu active à mesure que sa conversation avec vous progresse.",
+                                                                  "it":  "Quattro flag che il gioco imposta man mano che la conversazione con te procede.",
+                                                                  "pt-BR":  "Quatro marcadores que o jogo define conforme a conversa com você avança.",
+                                                                  "ru":  "Четыре отметки, которые игра выставляет по мере разговора с вами.",
+                                                                  "pl":  "Cztery flagi ustawiane przez grę w miarę postępu rozmowy z tobą.",
+                                                                  "uk":  "Чотири позначки, які гра виставляє в міру розмови з вами.",
+                                                                  "ja":  "会話が進むにつれてゲームが立てる 4 つのフラグ。",
+                                                                  "ko":  "대화가 진행됨에 따라 게임이 설정하는 네 개의 플래그입니다.",
+                                                                  "zh-CN":  "随着游戏与你的对话推进而设置的四个标记。"
+                                                              }
+                                     }
+                                 ],
+                       "label_i18n":  {
+                                          "tr":  "Karakter anıları",
+                                          "de":  "Erinnerungen der Figuren",
+                                          "es":  "Recuerdos de personajes",
+                                          "fr":  "Souvenirs des personnages",
+                                          "it":  "Ricordi dei personaggi",
+                                          "pt-BR":  "Memórias dos personagens",
+                                          "ru":  "Воспоминания персонажей",
+                                          "pl":  "Wspomnienia postaci",
+                                          "uk":  "Спогади персонажів",
+                                          "ja":  "キャラクターの記憶",
+                                          "ko":  "캐릭터 기억",
+                                          "zh-CN":  "角色记忆"
+                                      }
+                   }
+               ],
+    "presets":  [
+                    {
+                        "id":  "rich",
+                        "label":  "Get rich",
+                        "description":  "Set the money in save slot 1 to 999,999.",
+                        "requires":  "/tracked_progress/save_slots/1/currency",
+                        "edits":  [
+                                      {
+                                          "value":  999999,
+                                          "pointer":  "/tracked_progress/save_slots/1/currency"
+                                      }
+                                  ],
+                        "label_i18n":  {
+                                           "tr":  "Zengin ol",
+                                           "de":  "Reich werden",
+                                           "es":  "Hacerse rico",
+                                           "fr":  "Devenir riche",
+                                           "it":  "Diventa ricco",
+                                           "pt-BR":  "Ficar rico",
+                                           "ru":  "Разбогатеть",
+                                           "pl":  "Wzbogać się",
+                                           "uk":  "Розбагатіти",
+                                           "ja":  "大金持ちになる",
+                                           "ko":  "부자 되기",
+                                           "zh-CN":  "变得富有"
+                                       },
+                        "description_i18n":  {
+                                                 "tr":  "1. kayıt yuvasındaki parayı 999.999 yapar.",
+                                                 "de":  "Setzt das Geld auf Speicherplatz 1 auf 999.999.",
+                                                 "es":  "Pone el dinero de la ranura de guardado 1 en 999 999.",
+                                                 "fr":  "Met l\u0027argent de l\u0027emplacement de sauvegarde 1 à 999 999.",
+                                                 "it":  "Imposta il denaro dello slot di salvataggio 1 a 999.999.",
+                                                 "pt-BR":  "Define o dinheiro do slot de save 1 como 999.999.",
+                                                 "ru":  "Устанавливает деньги в слоте сохранения 1 на 999 999.",
+                                                 "pl":  "Ustawia pieniądze w slocie zapisu 1 na 999 999.",
+                                                 "uk":  "Встановлює гроші у слоті збереження 1 на 999 999.",
+                                                 "ja":  "セーブスロット 1 の所持金を 999,999 にします。",
+                                                 "ko":  "저장 슬롯 1의 돈을 999,999로 설정합니다.",
+                                                 "zh-CN":  "将存档位 1 的金钱设为 999,999。"
+                                             }
+                    }
+                ]
+}

@@ -1,0 +1,13 @@
+{
+	"cardmaster": {
+		"m1": 0,
+		"m2": 0,
+		"m3": 0,
+		"m4": 0
+	},
+	"death_amount": 0,
+	"death_amount_dialogue_index": 0,
+	"death_card_encounters": 0,
+	"death_types": [],
+	"has_talked_with_cardmaster": false
+}

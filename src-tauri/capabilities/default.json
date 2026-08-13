@@ -1,0 +1,10 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "The app's only window. It needs no network, filesystem or shell access from the frontend — all file work happens in Rust behind the commands in src/commands.rs. The one exception is revealing the backup and plugin folders in the system file manager from Settings.",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "opener:allow-reveal-item-in-dir"
+  ]
+}

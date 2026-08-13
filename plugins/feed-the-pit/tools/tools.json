@@ -1,0 +1,313 @@
+{
+  "_note": "Extracted from the player's own installed copy of Feed The Pit by tools/extract-tools.py. Identifiers only - no game assets.",
+  "tools": {
+    "apple": {
+      "label": "Apple",
+      "card": false
+    },
+    "camera": {
+      "label": "Camera",
+      "card": false
+    },
+    "club": {
+      "label": "Club",
+      "card": false
+    },
+    "dagger": {
+      "label": "Dagger",
+      "card": false
+    },
+    "dealers_glove": {
+      "label": "Dealer's Glove",
+      "card": false
+    },
+    "earring": {
+      "label": "Earring",
+      "card": false
+    },
+    "espresso": {
+      "label": "Espresso",
+      "card": false
+    },
+    "flashlight": {
+      "label": "Flashlight",
+      "card": false
+    },
+    "floatie": {
+      "label": "Floatie",
+      "card": false
+    },
+    "gamblers_die": {
+      "label": "Gambler's Die",
+      "card": false
+    },
+    "gold_watch": {
+      "label": "Gold Watch",
+      "card": false
+    },
+    "golden_apple": {
+      "label": "Golden Apple",
+      "card": false
+    },
+    "gun": {
+      "label": "Gun",
+      "card": false
+    },
+    "hand": {
+      "label": "Hand",
+      "card": false
+    },
+    "icarus_charm": {
+      "label": "Icarus' Feather",
+      "card": false
+    },
+    "jump_feather": {
+      "label": "Jump Feather",
+      "card": false
+    },
+    "pizza": {
+      "label": "Gift Shop Pizza",
+      "card": false
+    },
+    "placeholder": {
+      "label": "Placeholder",
+      "card": false
+    },
+    "protector_note": {
+      "label": "Protector Note",
+      "card": false
+    },
+    "red_tie": {
+      "label": "Red Tie",
+      "card": false
+    },
+    "riskier_roll": {
+      "label": "Risky Roll",
+      "card": false
+    },
+    "sage": {
+      "label": "Sage",
+      "card": false
+    },
+    "sinful_stone": {
+      "label": "Sinful Stone",
+      "card": false
+    },
+    "speed_berry": {
+      "label": "Speed Berry",
+      "card": false
+    },
+    "wedding_ring": {
+      "label": "Wedding Ring",
+      "card": false
+    },
+    "whittled_bird": {
+      "label": "Whittled Bird",
+      "card": false
+    },
+    "card_angle": {
+      "label": "Angle",
+      "card": true
+    },
+    "card_bolt": {
+      "label": "Bolt",
+      "card": true
+    },
+    "card_club": {
+      "label": "Club",
+      "card": true
+    },
+    "card_column": {
+      "label": "Column",
+      "card": true
+    },
+    "card_crescent": {
+      "label": "Crescent",
+      "card": true
+    },
+    "card_crosshair": {
+      "label": "Crosshair",
+      "card": true
+    },
+    "card_death_skull": {
+      "label": "Skull",
+      "card": true
+    },
+    "card_dev": {
+      "label": "Dev",
+      "card": true
+    },
+    "card_diameter": {
+      "label": "Diameter",
+      "card": true
+    },
+    "card_elevation": {
+      "label": "Elevation",
+      "card": true
+    },
+    "card_eyeball": {
+      "label": "Eyeball",
+      "card": true
+    },
+    "card_fish": {
+      "label": "Fish",
+      "card": true
+    },
+    "card_gears": {
+      "label": "Gears",
+      "card": true
+    },
+    "card_grave": {
+      "label": "Grave",
+      "card": true
+    },
+    "card_half": {
+      "label": "Half",
+      "card": true
+    },
+    "card_heart": {
+      "label": "Heart",
+      "card": true
+    },
+    "card_horseshoe": {
+      "label": "Horseshoe",
+      "card": true
+    },
+    "card_map_edge": {
+      "label": "Map Edge",
+      "card": true
+    },
+    "card_misprint": {
+      "label": "ntMispri",
+      "card": true
+    },
+    "card_north": {
+      "label": "North or South",
+      "card": true
+    },
+    "card_pepper": {
+      "label": "Pepper",
+      "card": true
+    },
+    "card_petals": {
+      "label": "Petals",
+      "card": true
+    },
+    "card_pill": {
+      "label": "Pill",
+      "card": true
+    },
+    "card_pinpoint": {
+      "label": "Pinpoint",
+      "card": true
+    },
+    "card_pocket": {
+      "label": "Pocket",
+      "card": true
+    },
+    "card_portal_closest": {
+      "label": "Close Portal",
+      "card": true
+    },
+    "card_portal_near_another": {
+      "label": "Card",
+      "card": true
+    },
+    "card_prism": {
+      "label": "Prism",
+      "card": true
+    },
+    "card_pyramid": {
+      "label": "Pyramid",
+      "card": true
+    },
+    "card_quadrant": {
+      "label": "Quadrant",
+      "card": true
+    },
+    "card_ripple": {
+      "label": "Ripple",
+      "card": true
+    },
+    "card_row": {
+      "label": "Row",
+      "card": true
+    },
+    "card_sawblade": {
+      "label": "Sawblade",
+      "card": true
+    },
+    "card_scanlines": {
+      "label": "Scanlines",
+      "card": true
+    },
+    "card_scythe": {
+      "label": "Scythe",
+      "card": true
+    },
+    "card_sickle": {
+      "label": "Sickle",
+      "card": true
+    },
+    "card_space_diamond": {
+      "label": "Diamond",
+      "card": true
+    },
+    "card_space_four": {
+      "label": "4 Spaces",
+      "card": true
+    },
+    "card_space_one": {
+      "label": "1 Space",
+      "card": true
+    },
+    "card_space_three": {
+      "label": "3 Spaces",
+      "card": true
+    },
+    "card_space_two": {
+      "label": "2 Spaces",
+      "card": true
+    },
+    "card_spade": {
+      "label": "Spade",
+      "card": true
+    },
+    "card_star": {
+      "label": "Star",
+      "card": true
+    },
+    "card_sun": {
+      "label": "Sun",
+      "card": true
+    },
+    "card_sword": {
+      "label": "Sword",
+      "card": true
+    },
+    "card_valley": {
+      "label": "Valley",
+      "card": true
+    },
+    "card_van": {
+      "label": "Van",
+      "card": true
+    },
+    "card_wave": {
+      "label": "Wave",
+      "card": true
+    },
+    "card_west": {
+      "label": "East or West",
+      "card": true
+    },
+    "card_x": {
+      "label": "card_x",
+      "card": true
+    },
+    "card_zipper": {
+      "label": "Zipper",
+      "card": true
+    }
+  }
+}

@@ -1,0 +1,5 @@
+# Pinned for this project only — it does not change the machine's default
+# toolchain. Tauri 2 and its dependency tree need edition-2024 support.
+[toolchain]
+channel = "stable"
+components = ["rustfmt", "clippy"]

@@ -1,0 +1,33 @@
+name: Bug report
+description: Something the app got wrong.
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected instead
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: App version and platform
+      description: Settings shows the version. Copy diagnostics if the button is there.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: save-state
+    attributes:
+      label: Your save
+      options:
+        - label: The game was closed while I was editing
+        - label: I still have the backup the app made
