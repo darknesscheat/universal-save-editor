@@ -60,10 +60,28 @@ fn list_processes() -> Vec<String> {
         .collect()
 }
 
+/// Pull the executable name out of the bytes of `/proc/<pid>/cmdline`.
+///
+/// The file is the argument vector with NUL separators, so the first entry is
+/// the command as it was invoked, sometimes as a path. Kernel threads have an
+/// empty cmdline, which is what `None` means here.
+#[cfg(not(target_os = "windows"))]
+fn name_from_cmdline(raw: &[u8]) -> Option<String> {
+    let argv0 = raw.split(|b| *b == 0).next()?;
+    let text = std::str::from_utf8(argv0).ok()?.trim();
+    let base = text.rsplit('/').next().unwrap_or(text);
+    (!base.is_empty()).then(|| base.to_string())
+}
+
 #[cfg(not(target_os = "windows"))]
 fn list_processes() -> Vec<String> {
-    // /proc/<pid>/comm holds the executable name on Linux. macOS has no /proc,
-    // so fall back to `ps`.
+    // Linux keeps this under /proc. macOS has no /proc, so it falls through to
+    // `ps` below.
+    //
+    // `cmdline` rather than the more obvious `comm`, because the kernel
+    // truncates `comm` to 15 characters. That is long enough to look correct in
+    // testing and short enough to silently break any game whose executable has
+    // a longer name.
     if let Ok(entries) = std::fs::read_dir("/proc") {
         let names: Vec<String> = entries
             .flatten()
@@ -73,8 +91,19 @@ fn list_processes() -> Vec<String> {
                     .map(|n| n.chars().all(|c| c.is_ascii_digit()))
                     .unwrap_or(false)
             })
-            .filter_map(|e| std::fs::read_to_string(e.path().join("comm")).ok())
-            .map(|n| normalise(n.trim()))
+            .filter_map(|e| {
+                let dir = e.path();
+                let from_cmdline = std::fs::read(dir.join("cmdline"))
+                    .ok()
+                    .and_then(|raw| name_from_cmdline(&raw));
+                match from_cmdline {
+                    Some(name) => Some(name),
+                    None => std::fs::read_to_string(dir.join("comm"))
+                        .ok()
+                        .map(|n| n.trim().to_string()),
+                }
+            })
+            .map(|n| normalise(&n))
             .collect();
         if !names.is_empty() {
             return names;
@@ -117,6 +146,27 @@ mod tests {
         assert_eq!(normalise("Pathogenic.exe"), "pathogenic");
         assert_eq!(normalise("  OAKENTOWER.EXE "), "oakentower");
         assert_eq!(normalise("ULTRAKILL"), "ultrakill");
+    }
+
+    /// Regression for a CI failure that only appeared on Linux: names came from
+    /// `/proc/<pid>/comm`, which the kernel truncates to 15 characters, so a
+    /// long executable name never matched what a plugin declared.
+    #[cfg(not(target_os = "windows"))]
+    #[test]
+    fn a_long_name_survives_being_read_from_cmdline() {
+        let long = "universal-save-editor-with-a-very-long-name";
+        assert!(long.len() > 15);
+
+        let raw = format!("/usr/bin/{long}\0--flag\0");
+        assert_eq!(name_from_cmdline(raw.as_bytes()).as_deref(), Some(long));
+    }
+
+    #[cfg(not(target_os = "windows"))]
+    #[test]
+    fn an_empty_cmdline_has_no_name() {
+        // Kernel threads look like this; the caller falls back to `comm`.
+        assert_eq!(name_from_cmdline(b""), None);
+        assert_eq!(name_from_cmdline(b"\0\0"), None);
     }
 
     /// The current test binary is by definition running, so it makes a
