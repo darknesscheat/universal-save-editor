@@ -164,6 +164,27 @@ fn validate(m: &Manifest) -> Result<()> {
             }
         }
     }
+
+    check_presets(m)?;
+    Ok(())
+}
+
+/// A preset that changes nothing is always a mistake, and a silent one: it
+/// appears as a button, the button works, and the save comes back untouched.
+/// The way it happens is a misspelled key, which serde ignores.
+fn check_presets(m: &Manifest) -> Result<()> {
+    for p in &m.presets {
+        if p.set.is_empty() && p.set_in_lists.is_empty() {
+            return Err(Error::PluginLoad(format!(
+                "preset '{}' would change nothing: it declares neither 'set' nor \
+                 'set_in_lists'",
+                p.id
+            )));
+        }
+        for item in &p.set {
+            check_pointer(&item.pointer)?;
+        }
+    }
     Ok(())
 }
 
@@ -273,6 +294,42 @@ mod tests {
                  {"id":"a","label":"A","pointer":"/x","type":"choice","options_ref":"nope"}]}]}"#,
         );
         assert!(reg_reason(&tmp).contains("unknown option set"));
+    }
+
+    /// Regression: two bundled plugins shipped a preset whose edits were under
+    /// a key named `edits`, which the schema calls `set`. Serde ignored it, the
+    /// button appeared, and pressing it changed nothing at all.
+    #[test]
+    fn a_preset_that_would_change_nothing_is_rejected() {
+        let tmp = tempfile::tempdir().unwrap();
+        write_plugin(
+            tmp.path(),
+            "preset",
+            r#"{"id":"p","name":"P","version":"1","format":"json",
+               "save_locations":[{"root":"{HOME}/p","pattern":"*.json"}],
+               "groups":[{"id":"g","label":"G","fields":[
+                 {"id":"money","label":"Money","pointer":"/money","type":"integer"}]}],
+               "presets":[{"id":"rich","label":"Rich",
+                 "edits":[{"pointer":"/money","value":999}]}]}"#,
+        );
+        assert!(reg_reason(&tmp).contains("would change nothing"));
+    }
+
+    #[test]
+    fn a_preset_that_sets_something_is_accepted() {
+        let tmp = tempfile::tempdir().unwrap();
+        write_plugin(
+            tmp.path(),
+            "preset",
+            r#"{"id":"p","name":"P","version":"1","format":"json",
+               "save_locations":[{"root":"{HOME}/p","pattern":"*.json"}],
+               "groups":[{"id":"g","label":"G","fields":[
+                 {"id":"money","label":"Money","pointer":"/money","type":"integer"}]}],
+               "presets":[{"id":"rich","label":"Rich",
+                 "set":[{"pointer":"/money","value":999}]}]}"#,
+        );
+        let reg = Registry::load(&[tmp.path().to_path_buf()]);
+        assert!(reg.problems().is_empty(), "{:?}", reg.problems());
     }
 
     fn reg_reason(tmp: &tempfile::TempDir) -> String {

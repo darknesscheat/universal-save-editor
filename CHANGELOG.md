@@ -7,6 +7,9 @@ is pre-1.0, so anything may still move.
 
 ### Added
 
+- **A third game: Sort Them Ducks**, and the first Unity one. The save is plain
+  JSON, so it needed no new format adapter, only a `{LOCALLOW}` path
+  placeholder for the folder Unity keeps every game's save in.
 - **A second game: Feed The Pit.** Three save slots, the six tool slots you
   carry and the four kept in the van, with a dropdown of all 77 tools and cards
   the game defines. Health is absent because the game keeps it in the run
@@ -66,6 +69,19 @@ is pre-1.0, so anything may still move.
 - Sections that do not apply to a save now explain why instead of vanishing.
 
 ### Fixed
+
+- **A Unity save could not be written at all.** Before touching the file the app
+  re-parses what it is about to write and compares. That comparison demanded
+  exact equality, which JSON floats cannot promise: in a two megabyte Sort Them
+  Ducks save one duck's rotation came back one bit from where it started, and
+  the editor refused the whole save. Structure, strings, and whether a number is
+  an integer or a decimal are still compared exactly; only the last bit or two
+  of a float may move. Failures now name the pointer that differed.
+- **Two presets silently did nothing.** Feed The Pit's *Get rich* and all three
+  of Sort Them Ducks' quick actions listed their changes under a key named
+  `edits`; the schema calls it `set`. Serde ignored the unknown key, so the
+  button appeared, worked, and left the save exactly as it was. Plugin loading
+  now rejects a preset that would change nothing.
 
 - **Late-game weapon slots were invisible.** The Pathogenic plugin enumerated
   `ESlot1`–`ESlot4`, but the game uses `ESlot5` and `ESlot6`; those weapons

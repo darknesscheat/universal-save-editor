@@ -6,6 +6,7 @@ pub mod presets;
 pub mod recovery;
 pub mod structure;
 pub mod validate;
+pub mod verify;
 
 use crate::backup::BackupManager;
 use crate::core::error::{Error, Result};
@@ -81,10 +82,10 @@ pub fn apply_and_write(
     let verify = adapter
         .parse(&bytes)
         .map_err(|e| Error::WriteFailed(format!("the rebuilt save did not parse ({e})")))?;
-    if verify != doc {
-        return Err(Error::WriteFailed(
-            "the rebuilt save did not match the edited data".into(),
-        ));
+    if let Some(where_) = verify::difference(&doc, &verify, String::new()) {
+        return Err(Error::WriteFailed(format!(
+            "the rebuilt save did not match the edited data at {where_}"
+        )));
     }
     if !detect::identifies_as(manifest, &verify) {
         return Err(Error::WriteFailed(

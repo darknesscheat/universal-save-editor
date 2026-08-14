@@ -205,7 +205,7 @@ $manifest = [ordered]@{
             id = 'rich'; label = 'Get rich'
             description = 'Set the money in save slot 1 to 999,999.'
             requires = '/tracked_progress/save_slots/1/currency'
-            edits = @(@{ pointer = '/tracked_progress/save_slots/1/currency'; value = 999999 })
+            set = @(@{ pointer = '/tracked_progress/save_slots/1/currency'; value = 999999 })
         }
     )
 }

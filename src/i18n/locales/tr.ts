@@ -70,7 +70,7 @@ export const tr: LocaleStrings = {
   "settings.cantOpenFolder": "Bu klasör açılamadı.",
   "settings.about": "Hakkında",
   "settings.aboutText":
-    "Universal Save Editor {version} — çevrimdışı oyun kayıtlarını ham dosyalara dokunmadan düzenle. Her şey bu bilgisayarda çalışır; hiçbir yere veri gönderilmez.",
+    "Universal Save Editor {version} — çevrimdışı oyun kayıtlarını ham dosyalara dokunmadan düzenle. Her şey bu bilgisayarda çalışır; hiçbir yere veri gönderilmez. Bu dildeki çeviride yapay zekadan yardım alınmıştır.",
 
   "field.enterValue": "Bir değer gir.",
   "field.enterNumber": "Bir sayı gir.",

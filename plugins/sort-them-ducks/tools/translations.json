@@ -1,0 +1,313 @@
+{
+  "_comment": "Translations for the Sort Them Ducks plugin label text. Machine-assisted and unreviewed; corrections from native speakers are welcome. Edit here, then re-run generate-manifest.ps1.",
+  "languages": ["tr", "de", "es", "fr", "it", "pt-BR", "ru", "pl", "uk", "ja", "ko", "zh-CN"],
+  "strings": {
+    "Save": {
+      "tr": "Kayıt", "de": "Spielstand", "es": "Partida", "fr": "Sauvegarde",
+      "it": "Salvataggio", "pt-BR": "Save", "ru": "Сохранение", "pl": "Zapis",
+      "uk": "Збереження", "ja": "セーブ", "ko": "저장", "zh-CN": "存档"
+    },
+    "Progress": {
+      "tr": "İlerleme", "de": "Fortschritt", "es": "Progreso", "fr": "Progression",
+      "it": "Progressi", "pt-BR": "Progresso", "ru": "Прогресс", "pl": "Postęp",
+      "uk": "Прогрес", "ja": "進行状況", "ko": "진행 상황", "zh-CN": "进度"
+    },
+    "Money": {
+      "tr": "Para", "de": "Geld", "es": "Dinero", "fr": "Argent", "it": "Denaro",
+      "pt-BR": "Dinheiro", "ru": "Деньги", "pl": "Pieniądze", "uk": "Гроші",
+      "ja": "所持金", "ko": "돈", "zh-CN": "金钱"
+    },
+    "Total money earned": {
+      "tr": "Toplam kazanılan para", "de": "Insgesamt verdientes Geld",
+      "es": "Dinero total ganado", "fr": "Argent total gagné",
+      "it": "Denaro totale guadagnato", "pt-BR": "Dinheiro total ganho",
+      "ru": "Всего заработано", "pl": "Łącznie zarobione pieniądze",
+      "uk": "Усього зароблено", "ja": "累計獲得金額", "ko": "총 획득 금액",
+      "zh-CN": "累计赚取金额"
+    },
+    "A running total the game keeps for its own statistics. Changing money does not change it.": {
+      "tr": "Oyunun kendi istatistiği için tuttuğu toplam. Parayı değiştirmek bunu değiştirmez.",
+      "de": "Eine Gesamtsumme, die das Spiel für seine Statistik führt. Das Geld zu ändern ändert sie nicht.",
+      "es": "Un total acumulado que el juego lleva para sus estadísticas. Cambiar el dinero no lo modifica.",
+      "fr": "Un cumul que le jeu tient pour ses statistiques. Modifier l'argent ne le change pas.",
+      "it": "Un totale che il gioco tiene per le sue statistiche. Cambiare il denaro non lo modifica.",
+      "pt-BR": "Um total que o jogo mantém para suas estatísticas. Mudar o dinheiro não altera isso.",
+      "ru": "Общая сумма, которую игра ведёт для статистики. Изменение денег её не меняет.",
+      "pl": "Suma, którą gra prowadzi na potrzeby statystyk. Zmiana pieniędzy jej nie zmienia.",
+      "uk": "Загальна сума, яку гра веде для статистики. Зміна грошей її не змінює.",
+      "ja": "ゲームが統計用に保持している累計です。所持金を変えても変わりません。",
+      "ko": "게임이 통계용으로 유지하는 누계입니다. 돈을 바꿔도 변하지 않습니다.",
+      "zh-CN": "游戏用于统计的累计值。修改金钱不会改变它。"
+    },
+    "Ducks on shelves": {
+      "tr": "Raftaki ördek", "de": "Enten in den Regalen", "es": "Patos en estanterías",
+      "fr": "Canards sur les étagères", "it": "Papere sugli scaffali",
+      "pt-BR": "Patos nas prateleiras", "ru": "Уток на полках", "pl": "Kaczki na półkach",
+      "uk": "Качок на полицях", "ja": "棚のアヒル", "ko": "선반의 오리",
+      "zh-CN": "货架上的鸭子"
+    },
+    "Filled shelves": {
+      "tr": "Dolan raf", "de": "Volle Regale", "es": "Estanterías llenas",
+      "fr": "Étagères remplies", "it": "Scaffali pieni", "pt-BR": "Prateleiras cheias",
+      "ru": "Заполненных полок", "pl": "Pełne półki", "uk": "Заповнених полиць",
+      "ja": "埋まった棚", "ko": "채운 선반", "zh-CN": "已填满的货架"
+    },
+    "Eggs collected": {
+      "tr": "Toplanan yumurta", "de": "Gesammelte Eier", "es": "Huevos recogidos",
+      "fr": "Œufs ramassés", "it": "Uova raccolte", "pt-BR": "Ovos coletados",
+      "ru": "Собрано яиц", "pl": "Zebrane jajka", "uk": "Зібрано яєць",
+      "ja": "集めた卵", "ko": "모은 알", "zh-CN": "已收集的蛋"
+    },
+    "This counter is separate from the eggs listed below. Setting one does not update the other.": {
+      "tr": "Bu sayaç aşağıdaki yumurta listesinden bağımsızdır. Birini değiştirmek diğerini güncellemez.",
+      "de": "Dieser Zähler ist von den unten aufgeführten Eiern getrennt. Das eine zu setzen aktualisiert das andere nicht.",
+      "es": "Este contador es independiente de los huevos de abajo. Cambiar uno no actualiza el otro.",
+      "fr": "Ce compteur est distinct des œufs listés ci-dessous. Modifier l'un ne met pas l'autre à jour.",
+      "it": "Questo contatore è separato dalle uova elencate sotto. Modificarne uno non aggiorna l'altro.",
+      "pt-BR": "Este contador é separado dos ovos listados abaixo. Alterar um não atualiza o outro.",
+      "ru": "Этот счётчик не связан со списком яиц ниже. Изменение одного не обновляет другое.",
+      "pl": "Ten licznik jest niezależny od jajek na liście poniżej. Zmiana jednego nie aktualizuje drugiego.",
+      "uk": "Цей лічильник не пов'язаний зі списком яєць нижче. Зміна одного не оновлює інше.",
+      "ja": "このカウンターは下の卵リストとは別です。片方を変えてももう片方は更新されません。",
+      "ko": "이 카운터는 아래 알 목록과 별개입니다. 한쪽을 바꿔도 다른 쪽은 갱신되지 않습니다.",
+      "zh-CN": "此计数与下方的蛋列表相互独立。改动其中一个不会更新另一个。"
+    },
+    "Speedrun time": {
+      "tr": "Hız koşusu süresi", "de": "Speedrun-Zeit", "es": "Tiempo de speedrun",
+      "fr": "Temps de speedrun", "it": "Tempo speedrun", "pt-BR": "Tempo de speedrun",
+      "ru": "Время спидрана", "pl": "Czas speedruna", "uk": "Час спідрану",
+      "ja": "スピードラン時間", "ko": "스피드런 시간", "zh-CN": "速通时间"
+    },
+    "In seconds.": {
+      "tr": "Saniye cinsinden.", "de": "In Sekunden.", "es": "En segundos.",
+      "fr": "En secondes.", "it": "In secondi.", "pt-BR": "Em segundos.",
+      "ru": "В секундах.", "pl": "W sekundach.", "uk": "У секундах.",
+      "ja": "秒単位です。", "ko": "초 단위입니다.", "zh-CN": "以秒为单位。"
+    },
+    "Abilities": {
+      "tr": "Yetenekler", "de": "Fähigkeiten", "es": "Habilidades", "fr": "Capacités",
+      "it": "Abilità", "pt-BR": "Habilidades", "ru": "Способности", "pl": "Umiejętności",
+      "uk": "Здібності", "ja": "アビリティ", "ko": "능력", "zh-CN": "能力"
+    },
+    "Sprint": {
+      "tr": "Koşma", "de": "Sprinten", "es": "Esprintar", "fr": "Sprint",
+      "it": "Scatto", "pt-BR": "Correr", "ru": "Бег", "pl": "Sprint",
+      "uk": "Біг", "ja": "ダッシュ", "ko": "질주", "zh-CN": "冲刺"
+    },
+    "Crouch": {
+      "tr": "Eğilme", "de": "Ducken", "es": "Agacharse", "fr": "S'accroupir",
+      "it": "Accovacciarsi", "pt-BR": "Agachar", "ru": "Присед", "pl": "Kucanie",
+      "uk": "Присідання", "ja": "しゃがみ", "ko": "웅크리기", "zh-CN": "蹲下"
+    },
+    "Dunk a duck": {
+      "tr": "Ördek smaçlama", "de": "Ente versenken", "es": "Encestar un pato",
+      "fr": "Dunker un canard", "it": "Schiacciare una papera", "pt-BR": "Enterrar um pato",
+      "ru": "Данк уткой", "pl": "Wsad kaczką", "uk": "Данк качкою",
+      "ja": "アヒルダンク", "ko": "오리 덩크", "zh-CN": "灌篮鸭子"
+    },
+    "Find the same duck": {
+      "tr": "Aynı ördeği bul", "de": "Gleiche Ente finden", "es": "Encontrar el mismo pato",
+      "fr": "Trouver le même canard", "it": "Trova la stessa papera",
+      "pt-BR": "Encontrar o mesmo pato", "ru": "Найти такую же утку",
+      "pl": "Znajdź taką samą kaczkę", "uk": "Знайти таку саму качку",
+      "ja": "同じアヒルを探す", "ko": "같은 오리 찾기", "zh-CN": "找到相同的鸭子"
+    },
+    "Collect duck": {
+      "tr": "Ördek topla", "de": "Ente einsammeln", "es": "Recoger pato",
+      "fr": "Ramasser un canard", "it": "Raccogli papera", "pt-BR": "Coletar pato",
+      "ru": "Подобрать утку", "pl": "Zbierz kaczkę", "uk": "Підібрати качку",
+      "ja": "アヒルを拾う", "ko": "오리 줍기", "zh-CN": "收集鸭子"
+    },
+    "Find a shelf for a duck": {
+      "tr": "Ördeğe raf bul", "de": "Regal für eine Ente finden",
+      "es": "Encontrar estantería para un pato", "fr": "Trouver une étagère pour un canard",
+      "it": "Trova uno scaffale per una papera", "pt-BR": "Encontrar prateleira para um pato",
+      "ru": "Найти полку для утки", "pl": "Znajdź półkę dla kaczki",
+      "uk": "Знайти полицю для качки", "ja": "アヒルの棚を探す",
+      "ko": "오리를 놓을 선반 찾기", "zh-CN": "为鸭子找货架"
+    },
+    "Times \"find the same duck\" was used": {
+      "tr": "\"Aynı ördeği bul\" kullanım sayısı",
+      "de": "Wie oft \"Gleiche Ente finden\" benutzt wurde",
+      "es": "Veces que se usó \"encontrar el mismo pato\"",
+      "fr": "Nombre d'utilisations de « trouver le même canard »",
+      "it": "Volte in cui è stato usato \"trova la stessa papera\"",
+      "pt-BR": "Vezes que \"encontrar o mesmo pato\" foi usado",
+      "ru": "Сколько раз использовано «найти такую же утку»",
+      "pl": "Ile razy użyto \"znajdź taką samą kaczkę\"",
+      "uk": "Скільки разів використано «знайти таку саму качку»",
+      "ja": "「同じアヒルを探す」を使った回数",
+      "ko": "\"같은 오리 찾기\" 사용 횟수",
+      "zh-CN": "使用“找到相同的鸭子”的次数"
+    },
+    "Player egg unlocked": {
+      "tr": "Oyuncu yumurtası açıldı", "de": "Spieler-Ei freigeschaltet",
+      "es": "Huevo del jugador desbloqueado", "fr": "Œuf du joueur débloqué",
+      "it": "Uovo del giocatore sbloccato", "pt-BR": "Ovo do jogador desbloqueado",
+      "ru": "Яйцо игрока открыто", "pl": "Jajko gracza odblokowane",
+      "uk": "Яйце гравця відкрито", "ja": "プレイヤーの卵が解放済み",
+      "ko": "플레이어 알 해금됨", "zh-CN": "玩家蛋已解锁"
+    },
+    "Player egg cracked": {
+      "tr": "Oyuncu yumurtası kırıldı", "de": "Spieler-Ei aufgebrochen",
+      "es": "Huevo del jugador roto", "fr": "Œuf du joueur brisé",
+      "it": "Uovo del giocatore rotto", "pt-BR": "Ovo do jogador quebrado",
+      "ru": "Яйцо игрока разбито", "pl": "Jajko gracza rozbite",
+      "uk": "Яйце гравця розбито", "ja": "プレイヤーの卵が割れた",
+      "ko": "플레이어 알 깨짐", "zh-CN": "玩家蛋已破壳"
+    },
+    "Cashier money collected": {
+      "tr": "Kasadaki para alındı", "de": "Kassengeld eingesammelt",
+      "es": "Dinero de la caja recogido", "fr": "Argent de la caisse récupéré",
+      "it": "Denaro della cassa raccolto", "pt-BR": "Dinheiro do caixa coletado",
+      "ru": "Деньги из кассы забраны", "pl": "Pieniądze z kasy zebrane",
+      "uk": "Гроші з каси забрано", "ja": "レジのお金を回収済み",
+      "ko": "계산대 돈 수령함", "zh-CN": "已领取收银台的钱"
+    },
+    "Has used magic": {
+      "tr": "Büyü kullanıldı", "de": "Hat Magie benutzt", "es": "Ha usado magia",
+      "fr": "A utilisé la magie", "it": "Ha usato la magia", "pt-BR": "Já usou magia",
+      "ru": "Использовал магию", "pl": "Użył magii", "uk": "Використав магію",
+      "ja": "魔法を使ったことがある", "ko": "마법을 사용함", "zh-CN": "使用过魔法"
+    },
+    "Upgrades": {
+      "tr": "Yükseltmeler", "de": "Verbesserungen", "es": "Mejoras", "fr": "Améliorations",
+      "it": "Potenziamenti", "pt-BR": "Melhorias", "ru": "Улучшения", "pl": "Ulepszenia",
+      "uk": "Покращення", "ja": "アップグレード", "ko": "업그레이드", "zh-CN": "升级"
+    },
+    "The game's own ceiling for these is unknown, so the range here is a guess. A value the game rejects will be corrected the next time it saves.": {
+      "tr": "Oyunun bunlar için tavanı bilinmiyor, buradaki aralık tahmindir. Oyunun kabul etmediği bir değer, bir sonraki kayıtta düzeltilir.",
+      "de": "Die Obergrenze des Spiels ist unbekannt, der Bereich hier ist geschätzt. Einen Wert, den das Spiel ablehnt, korrigiert es beim nächsten Speichern.",
+      "es": "El tope del juego se desconoce, así que este rango es una estimación. Un valor que el juego rechace se corregirá al guardar de nuevo.",
+      "fr": "Le plafond du jeu est inconnu, cette plage est une estimation. Une valeur refusée sera corrigée à la prochaine sauvegarde.",
+      "it": "Il limite del gioco non è noto, quindi questo intervallo è una stima. Un valore rifiutato verrà corretto al prossimo salvataggio.",
+      "pt-BR": "O teto do jogo é desconhecido, então esta faixa é um palpite. Um valor recusado será corrigido no próximo save.",
+      "ru": "Потолок игры неизвестен, поэтому диапазон здесь предположительный. Значение, которое игра не примет, будет исправлено при следующем сохранении.",
+      "pl": "Górny limit gry jest nieznany, więc ten zakres to przypuszczenie. Wartość odrzucona przez grę zostanie poprawiona przy następnym zapisie.",
+      "uk": "Стеля гри невідома, тож діапазон тут приблизний. Значення, яке гра не прийме, буде виправлено при наступному збереженні.",
+      "ja": "ゲーム側の上限は不明なので、ここの範囲は推測です。ゲームが受け付けない値は次回のセーブで補正されます。",
+      "ko": "게임의 상한이 알려지지 않아 여기 범위는 추정치입니다. 게임이 거부하는 값은 다음 저장 때 보정됩니다.",
+      "zh-CN": "游戏本身的上限未知，此处范围为估计值。游戏不接受的数值会在下次保存时被修正。"
+    },
+    "Inventory size": {
+      "tr": "Envanter boyutu", "de": "Inventargröße", "es": "Tamaño del inventario",
+      "fr": "Taille de l'inventaire", "it": "Dimensione inventario",
+      "pt-BR": "Tamanho do inventário", "ru": "Размер инвентаря", "pl": "Rozmiar ekwipunku",
+      "uk": "Розмір інвентарю", "ja": "所持枠", "ko": "가방 크기", "zh-CN": "背包容量"
+    },
+    "Throw strength": {
+      "tr": "Fırlatma gücü", "de": "Wurfkraft", "es": "Fuerza de lanzamiento",
+      "fr": "Force de lancer", "it": "Forza di lancio", "pt-BR": "Força do arremesso",
+      "ru": "Сила броска", "pl": "Siła rzutu", "uk": "Сила кидка",
+      "ja": "投げる力", "ko": "던지기 힘", "zh-CN": "投掷力量"
+    },
+    "Reach": {
+      "tr": "Erişim mesafesi", "de": "Reichweite", "es": "Alcance", "fr": "Portée",
+      "it": "Portata", "pt-BR": "Alcance", "ru": "Дальность", "pl": "Zasięg",
+      "uk": "Дальність", "ja": "リーチ", "ko": "사거리", "zh-CN": "触及范围"
+    },
+    "Collectibles": {
+      "tr": "Toplanabilirler", "de": "Sammelobjekte", "es": "Coleccionables",
+      "fr": "Objets à collectionner", "it": "Collezionabili", "pt-BR": "Colecionáveis",
+      "ru": "Коллекционные предметы", "pl": "Znajdźki", "uk": "Колекційні предмети",
+      "ja": "収集要素", "ko": "수집품", "zh-CN": "收集品"
+    },
+    "Eggs": {
+      "tr": "Yumurtalar", "de": "Eier", "es": "Huevos", "fr": "Œufs", "it": "Uova",
+      "pt-BR": "Ovos", "ru": "Яйца", "pl": "Jajka", "uk": "Яйця",
+      "ja": "卵", "ko": "알", "zh-CN": "蛋"
+    },
+    "The ten hidden eggs.": {
+      "tr": "Gizli on yumurta.", "de": "Die zehn versteckten Eier.",
+      "es": "Los diez huevos escondidos.", "fr": "Les dix œufs cachés.",
+      "it": "Le dieci uova nascoste.", "pt-BR": "Os dez ovos escondidos.",
+      "ru": "Десять спрятанных яиц.", "pl": "Dziesięć ukrytych jajek.",
+      "uk": "Десять схованих яєць.", "ja": "隠された 10 個の卵。",
+      "ko": "숨겨진 열 개의 알.", "zh-CN": "十枚隐藏的蛋。"
+    },
+    "Collected": {
+      "tr": "Toplandı", "de": "Gesammelt", "es": "Recogido", "fr": "Ramassé",
+      "it": "Raccolto", "pt-BR": "Coletado", "ru": "Собрано", "pl": "Zebrane",
+      "uk": "Зібрано", "ja": "取得済み", "ko": "획득함", "zh-CN": "已收集"
+    },
+    "Collect all": {
+      "tr": "Hepsini topla", "de": "Alle einsammeln", "es": "Recoger todos",
+      "fr": "Tout ramasser", "it": "Raccogli tutte", "pt-BR": "Coletar todos",
+      "ru": "Собрать все", "pl": "Zbierz wszystkie", "uk": "Зібрати всі",
+      "ja": "すべて取得", "ko": "모두 획득", "zh-CN": "全部收集"
+    },
+    "Clear all": {
+      "tr": "Hepsini sıfırla", "de": "Alle zurücksetzen", "es": "Restablecer todos",
+      "fr": "Tout réinitialiser", "it": "Azzera tutte", "pt-BR": "Limpar todos",
+      "ru": "Сбросить все", "pl": "Wyczyść wszystkie", "uk": "Скинути всі",
+      "ja": "すべて未取得に", "ko": "모두 해제", "zh-CN": "全部清除"
+    },
+    "Bombs": {
+      "tr": "Bombalar", "de": "Bomben", "es": "Bombas", "fr": "Bombes",
+      "it": "Bombe", "pt-BR": "Bombas", "ru": "Бомбы", "pl": "Bomby",
+      "uk": "Бомби", "ja": "爆弾", "ko": "폭탄", "zh-CN": "炸弹"
+    },
+    "Active": {
+      "tr": "Etkin", "de": "Aktiv", "es": "Activa", "fr": "Active",
+      "it": "Attiva", "pt-BR": "Ativa", "ru": "Активна", "pl": "Aktywna",
+      "uk": "Активна", "ja": "有効", "ko": "활성", "zh-CN": "启用"
+    },
+    "Get rich": {
+      "tr": "Zengin ol", "de": "Reich werden", "es": "Hacerse rico", "fr": "Devenir riche",
+      "it": "Diventa ricco", "pt-BR": "Ficar rico", "ru": "Разбогатеть", "pl": "Wzbogać się",
+      "uk": "Розбагатіти", "ja": "大金持ちになる", "ko": "부자 되기", "zh-CN": "变得富有"
+    },
+    "Set money to 999,999.": {
+      "tr": "Parayı 999.999 yapar.", "de": "Setzt das Geld auf 999.999.",
+      "es": "Pone el dinero en 999 999.", "fr": "Met l'argent à 999 999.",
+      "it": "Imposta il denaro a 999.999.", "pt-BR": "Define o dinheiro como 999.999.",
+      "ru": "Устанавливает деньги на 999 999.", "pl": "Ustawia pieniądze na 999 999.",
+      "uk": "Встановлює гроші на 999 999.", "ja": "所持金を 999,999 にします。",
+      "ko": "돈을 999,999로 설정합니다.", "zh-CN": "将金钱设为 999,999。"
+    },
+    "Unlock every ability": {
+      "tr": "Tüm yetenekleri aç", "de": "Alle Fähigkeiten freischalten",
+      "es": "Desbloquear todas las habilidades", "fr": "Débloquer toutes les capacités",
+      "it": "Sblocca tutte le abilità", "pt-BR": "Desbloquear todas as habilidades",
+      "ru": "Открыть все способности", "pl": "Odblokuj wszystkie umiejętności",
+      "uk": "Відкрити всі здібності", "ja": "すべてのアビリティを解放",
+      "ko": "모든 능력 해금", "zh-CN": "解锁全部能力"
+    },
+    "Turn on sprint, crouch, dunking and the three finding aids.": {
+      "tr": "Koşma, eğilme, smaçlama ve üç bulma yardımını açar.",
+      "de": "Aktiviert Sprinten, Ducken, Versenken und die drei Suchhilfen.",
+      "es": "Activa esprintar, agacharse, encestar y las tres ayudas de búsqueda.",
+      "fr": "Active le sprint, l'accroupissement, le dunk et les trois aides de recherche.",
+      "it": "Attiva scatto, accovacciamento, schiacciata e i tre aiuti di ricerca.",
+      "pt-BR": "Ativa correr, agachar, enterrar e as três ajudas de busca.",
+      "ru": "Включает бег, присед, данк и три подсказки поиска.",
+      "pl": "Włącza sprint, kucanie, wsad i trzy pomoce w wyszukiwaniu.",
+      "uk": "Вмикає біг, присідання, данк і три помічники пошуку.",
+      "ja": "ダッシュ、しゃがみ、ダンク、そして 3 つの探索補助を有効にします。",
+      "ko": "질주, 웅크리기, 덩크와 세 가지 찾기 보조를 켭니다.",
+      "zh-CN": "开启冲刺、蹲下、灌篮以及三种查找辅助。"
+    },
+    "Max out the upgrades": {
+      "tr": "Yükseltmeleri sonuna çek", "de": "Verbesserungen ausreizen",
+      "es": "Maximizar las mejoras", "fr": "Pousser les améliorations au maximum",
+      "it": "Porta i potenziamenti al massimo", "pt-BR": "Maximizar as melhorias",
+      "ru": "Прокачать улучшения", "pl": "Maksymalne ulepszenia",
+      "uk": "Прокачати покращення", "ja": "アップグレードを最大に",
+      "ko": "업그레이드 최대치로", "zh-CN": "升级拉满"
+    },
+    "Set inventory size, throw strength and reach to 10. The real ceiling is unknown, so the game may trim these.": {
+      "tr": "Envanter boyutunu, fırlatma gücünü ve erişimi 10 yapar. Gerçek tavan bilinmiyor, oyun bunları kırpabilir.",
+      "de": "Setzt Inventargröße, Wurfkraft und Reichweite auf 10. Die echte Obergrenze ist unbekannt, das Spiel kann sie kappen.",
+      "es": "Pone el tamaño del inventario, la fuerza de lanzamiento y el alcance en 10. El tope real se desconoce y el juego podría recortarlos.",
+      "fr": "Met la taille de l'inventaire, la force de lancer et la portée à 10. Le vrai plafond est inconnu, le jeu peut les réduire.",
+      "it": "Imposta dimensione inventario, forza di lancio e portata a 10. Il limite reale non è noto, il gioco potrebbe ridurli.",
+      "pt-BR": "Define tamanho do inventário, força do arremesso e alcance como 10. O teto real é desconhecido e o jogo pode cortá-los.",
+      "ru": "Устанавливает размер инвентаря, силу броска и дальность на 10. Настоящий потолок неизвестен, игра может их урезать.",
+      "pl": "Ustawia rozmiar ekwipunku, siłę rzutu i zasięg na 10. Prawdziwy limit jest nieznany, gra może je przyciąć.",
+      "uk": "Встановлює розмір інвентарю, силу кидка та дальність на 10. Справжня стеля невідома, гра може їх скоротити.",
+      "ja": "所持枠・投げる力・リーチを 10 にします。実際の上限は不明で、ゲームが切り詰める場合があります。",
+      "ko": "가방 크기, 던지기 힘, 사거리를 10으로 설정합니다. 실제 상한은 알 수 없어 게임이 줄일 수 있습니다.",
+      "zh-CN": "将背包容量、投掷力量和触及范围设为 10。真实上限未知，游戏可能会削减。"
+    }
+  }
+}

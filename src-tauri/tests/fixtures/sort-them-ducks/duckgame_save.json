@@ -1,0 +1,147 @@
+{
+    "money": 4.0,
+    "totalMoneyEarned": 4.0,
+    "totalDucksOnShelves": 4,
+    "totalFilledShelves": 0,
+    "totalCollectedEggs": 1,
+    "ducks": [
+        {
+            "instanceId": "f1d73a22-0daa-4493-a0db-abbe8dac882d",
+            "duckSOId": "Bear",
+            "px": -23.504018783569336,
+            "py": 0.2527619004249573,
+            "pz": -9.6007080078125,
+            "rx": 89.88809204101562,
+            "ry": 316.0474853515625,
+            "rz": 0.0,
+            "location": "world",
+            "shelfId": "",
+            "slotX": 0,
+            "slotY": 0,
+            "placedOrder": 0
+        },
+        {
+            "instanceId": "37b5b138-21f0-4bc8-9a0c-4ce3b3b9b81c",
+            "duckSOId": "Bear",
+            "px": -19.90960121154785,
+            "py": 0.4923521876335144,
+            "pz": -24.920734405517578,
+            "rx": 1.4958572387695312,
+            "ry": 187.57772827148438,
+            "rz": 180.32728576660156,
+            "location": "world",
+            "shelfId": "",
+            "slotX": 0,
+            "slotY": 0,
+            "placedOrder": 0
+        },
+        {
+            "instanceId": "1c1bc485-c0d2-4ea0-ad7d-4479a864f281",
+            "duckSOId": "Pizza",
+            "px": 6.161136150360107,
+            "py": 3.112619638442993,
+            "pz": -1.2141159772872925,
+            "rx": 359.9145202636719,
+            "ry": 359.9819641113281,
+            "rz": -1.3872129784431309e-05,
+            "location": "shelf",
+            "shelfId": "shelf_22b98b8a9eea41bcb17961ce2aae5c6a",
+            "slotX": 1,
+            "slotY": 0,
+            "placedOrder": 1
+        }
+    ],
+    "inventoryDuckInstanceIds": [
+        "da751446-2ffa-489b-b15b-d04b61612cb9"
+    ],
+    "bombs": [
+        {
+            "bombId": "4",
+            "px": -27.462268829345703,
+            "py": 0.5417766571044922,
+            "pz": -17.510238647460938,
+            "rx": 76.53654479980469,
+            "ry": 35.76327133178711,
+            "rz": 151.07461547851562,
+            "isActive": true
+        },
+        {
+            "bombId": "3",
+            "px": -20.9833927154541,
+            "py": 0.8560566902160645,
+            "pz": 2.5209102630615234,
+            "rx": 67.7795639038086,
+            "ry": 197.66976928710938,
+            "rz": 157.6364288330078,
+            "isActive": true
+        },
+        {
+            "bombId": "2",
+            "px": 1.377706527709961,
+            "py": 0.6136865615844727,
+            "pz": -9.992242813110352,
+            "rx": 301.38177490234375,
+            "ry": 198.15687561035156,
+            "rz": 343.49603271484375,
+            "isActive": true
+        }
+    ],
+    "eggs": [
+        {
+            "eggId": "3",
+            "isCollected": true
+        },
+        {
+            "eggId": "9",
+            "isCollected": false
+        },
+        {
+            "eggId": "10",
+            "isCollected": false
+        },
+        {
+            "eggId": "1",
+            "isCollected": false
+        },
+        {
+            "eggId": "5",
+            "isCollected": false
+        },
+        {
+            "eggId": "6",
+            "isCollected": false
+        },
+        {
+            "eggId": "4",
+            "isCollected": false
+        },
+        {
+            "eggId": "8",
+            "isCollected": false
+        },
+        {
+            "eggId": "7",
+            "isCollected": false
+        },
+        {
+            "eggId": "2",
+            "isCollected": false
+        }
+    ],
+    "findSameDuckUnlocked": false,
+    "collectDuckUnlocked": false,
+    "findShelfForDuckUnlocked": false,
+    "inventorySizeLevel": 1,
+    "strongerThrowLevel": 0,
+    "longerReachLevel": 0,
+    "dunkADuckUnlocked": false,
+    "sprintUnlocked": true,
+    "crouchUnlocked": false,
+    "findSameDuckUseCount": 0,
+    "permanentBonusUpgradeIds": [],
+    "playerEggCracked": false,
+    "playerEggUnlocked": false,
+    "cashierMoneyCollected": false,
+    "hasUsedMagic": false,
+    "speedRunElapsedSeconds": 282.7273864746094
+}

@@ -77,9 +77,15 @@ speakers**. Corrections are the easiest useful contribution there is: see
 |------|-------------------|-------------|
 | **Pathogenic** | Health, money, armor, DNA, stamina, floor, rerolls; equipment (45 weapons × 4 rarities, 73 organs); 53 mutations; permanent starting loadout; 161 discovery and kill-count entries; profile progression | JSON |
 | **Feed The Pit** | Money, mission, difficulty and location for each of the three save slots; the six carried tool slots and four van slots, choosing from all 77 tools and cards the game defines; mushroom count; death counters and Cardmaster memories | JSON |
+| **Sort Them Ducks** | Money and the shelf, egg and speedrun counters; all ten abilities; the three upgrade tracks; the ten hidden eggs individually or all at once | JSON |
 
-Both games keep more than one kind of save file, and each plugin handles all of
-them, showing only the sections that apply to the file you opened. Pathogenic
+Sort Them Ducks is the first Unity game here, and it needed no new code: the save
+is plain JSON. Its 4,015 ducks are not offered for editing, because each one is a
+position and a rotation in the world rather than anything a player would want to
+change.
+
+Pathogenic and Feed The Pit keep more than one kind of save file, and each
+plugin handles all of them, showing only the sections that apply to the file you opened. Pathogenic
 splits a run in progress from a permanent profile; Feed The Pit splits slot
 progress from character memories.
 

@@ -12,8 +12,14 @@ use std::path::{Path, PathBuf};
 /// | `{HOME}`     | `C:\Users\me`                | `/home/me`                | `/Users/me`                        |
 /// | `{APPDATA}`  | `…\AppData\Roaming`          | `~/.local/share`          | `~/Library/Application Support`    |
 /// | `{LOCALAPPDATA}` | `…\AppData\Local`        | `~/.local/share`          | `~/Library/Application Support`    |
+/// | `{LOCALLOW}` | `…\AppData\LocalLow`         | `~/.config/unity3d`       | `~/Library/Application Support`    |
 /// | `{DOCUMENTS}`| `…\Documents`                | `~/Documents`             | `~/Documents`                      |
 /// | `{CONFIG}`   | `…\AppData\Roaming`          | `~/.config`               | `~/Library/Application Support`    |
+///
+/// `{LOCALLOW}` exists for Unity, which puts every game's save under
+/// `AppData\LocalLow\<company>\<product>` on Windows. The folder has no
+/// counterpart elsewhere, so on Linux it resolves to the directory Unity uses
+/// there instead, which keeps one manifest line working on both.
 pub fn expand(template: &str) -> Result<PathBuf> {
     let home =
         dirs::home_dir().ok_or_else(|| Error::Io("Home folder could not be located.".into()))?;
@@ -22,12 +28,14 @@ pub fn expand(template: &str) -> Result<PathBuf> {
     let local = dirs::data_local_dir().unwrap_or_else(|| appdata.clone());
     let documents = dirs::document_dir().unwrap_or_else(|| home.join("Documents"));
     let config = dirs::config_dir().unwrap_or_else(|| appdata.clone());
+    let locallow = local_low(&home, &config, &appdata);
 
     let mut out = template.to_string();
     for (key, value) in [
         ("{HOME}", home.clone()),
         ("{APPDATA}", appdata),
         ("{LOCALAPPDATA}", local),
+        ("{LOCALLOW}", locallow),
         ("{DOCUMENTS}", documents),
         ("{CONFIG}", config),
         ("{PROGRAMFILES}", program_files(false)),
@@ -54,6 +62,22 @@ pub fn expand(template: &str) -> Result<PathBuf> {
     Ok(PathBuf::from(
         out.replace('/', std::path::MAIN_SEPARATOR_STR),
     ))
+}
+
+/// Unity's save folder.
+///
+/// On Windows this is a real, separate directory beside `Local` and `Roaming`,
+/// and `dirs` does not expose it, so it is derived from the local data folder.
+/// Elsewhere Unity has no such split: Linux builds write to `~/.config/unity3d`
+/// and macOS to the ordinary application-support folder.
+fn local_low(home: &Path, config: &Path, appdata: &Path) -> PathBuf {
+    if cfg!(target_os = "windows") {
+        return home.join("AppData").join("LocalLow");
+    }
+    if cfg!(target_os = "macos") {
+        return appdata.to_path_buf();
+    }
+    config.join("unity3d")
 }
 
 fn program_files(x86: bool) -> PathBuf {
@@ -131,6 +155,24 @@ mod tests {
     fn rejects_unknown_placeholder() {
         let err = expand("{NOPE}/x").unwrap_err();
         assert!(err.to_string().contains("{NOPE}"));
+    }
+
+    /// Unity keeps every game's save under this folder on Windows, so a plugin
+    /// for any Unity game needs it and none of them should have to spell out
+    /// `{HOME}/AppData/LocalLow` by hand.
+    #[test]
+    fn expands_the_unity_save_folder() {
+        let p = expand("{LOCALLOW}/Mr_Duck/Sort Them Ducks").unwrap();
+        let text = p.to_string_lossy().replace('\\', "/");
+
+        assert!(
+            !text.contains('{'),
+            "placeholder was left unresolved: {text}"
+        );
+        assert!(text.ends_with("Mr_Duck/Sort Them Ducks"));
+        if cfg!(target_os = "windows") {
+            assert!(text.contains("AppData/LocalLow"), "{text}");
+        }
     }
 
     #[test]

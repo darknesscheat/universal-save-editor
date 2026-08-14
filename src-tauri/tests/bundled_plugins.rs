@@ -1406,3 +1406,173 @@ fn tool_names_are_never_translated() {
     assert_eq!(apple.label, "Golden Apple");
     assert!(apple.label_i18n.is_empty());
 }
+
+// ---------------------------------------------------------------------------
+// Sort Them Ducks
+//
+// Unity, and the first plugin here for that engine. The save is plain JSON, so
+// it needed no new format adapter; the only core change it asked for was a
+// `{LOCALLOW}` placeholder, because that is where Unity puts every game's save
+// on Windows.
+
+fn sort_them_ducks() -> Manifest {
+    let reg = Registry::load(&[plugins_dir()]);
+    assert!(
+        reg.problems().is_empty(),
+        "bundled plugins failed to load: {:?}",
+        reg.problems()
+    );
+    reg.get("sort-them-ducks")
+        .expect("the sort-them-ducks plugin ships with the app")
+        .manifest
+        .clone()
+}
+
+fn ducks_save() -> (tempfile::TempDir, PathBuf) {
+    let tmp = tempfile::tempdir().unwrap();
+    let dst = tmp.path().join("duckgame_save.json");
+    std::fs::copy(fixture("sort-them-ducks", "duckgame_save.json"), &dst).unwrap();
+    (tmp, dst)
+}
+
+#[test]
+fn sort_them_ducks_reads_a_real_save() {
+    let m = sort_them_ducks();
+    let doc =
+        save::detect::load_document(&m, &fixture("sort-them-ducks", "duckgame_save.json")).unwrap();
+    let view = save::editor::build(&m, "p", &doc, "en", Default::default());
+
+    let ids: Vec<&str> = view.groups.iter().map(|g| g.id.as_str()).collect();
+    assert_eq!(
+        ids,
+        vec!["progress", "abilities", "upgrades", "collectibles"]
+    );
+
+    let progress = &view.groups[0];
+    let money = progress.fields.iter().find(|f| f.id == "money").unwrap();
+    assert_eq!(money.value, serde_json::json!(4.0));
+}
+
+#[test]
+fn the_ten_eggs_are_listed_by_their_own_id() {
+    let m = sort_them_ducks();
+    let doc =
+        save::detect::load_document(&m, &fixture("sort-them-ducks", "duckgame_save.json")).unwrap();
+    let view = save::editor::build(&m, "p", &doc, "en", Default::default());
+
+    let eggs = view
+        .groups
+        .iter()
+        .find(|g| g.id == "collectibles")
+        .unwrap()
+        .lists
+        .iter()
+        .find(|l| l.id == "eggs")
+        .unwrap();
+    assert_eq!(eggs.items.len(), 10);
+
+    // The array is not stored in egg order, so a row labelled by its position
+    // would name the wrong egg. The first entry in the file is egg 3.
+    assert_eq!(eggs.items[0].label, "3");
+    assert_eq!(eggs.items[0].fields[0].value, serde_json::json!(true));
+
+    // And the list offers a way to do all ten at once.
+    let actions: Vec<&str> = eggs.bulk_actions.iter().map(|a| a.id.as_str()).collect();
+    assert_eq!(actions, vec!["all_on", "all_off"]);
+}
+
+#[test]
+fn money_stays_a_decimal_for_unity() {
+    // Unity wrote `4.0`. Handing it back `4` is how a save gets corrupted.
+    let m = sort_them_ducks();
+    let (tmp, path) = ducks_save();
+    let backups = BackupManager::new(tmp.path().join("backups"));
+
+    save::apply_and_write(
+        &m,
+        &backups,
+        &path,
+        &[Edit {
+            pointer: "/money".into(),
+            value: serde_json::json!(50000),
+        }],
+        None,
+        false,
+    )
+    .unwrap();
+
+    let text = std::fs::read_to_string(&path).unwrap();
+    assert!(text.contains("50000.0"), "money lost its decimal point");
+    // And a field the game stores as an integer must not gain one.
+    assert!(
+        text.contains("\"totalDucksOnShelves\": 4"),
+        "an integer became a float"
+    );
+}
+
+#[test]
+fn the_four_thousand_ducks_are_not_offered_for_editing() {
+    // Every duck in the world is in this file with its coordinates. Surfacing
+    // them would be thousands of rows of numbers nobody can use, so the plugin
+    // leaves the array alone -- and that means the write path must refuse it.
+    let m = sort_them_ducks();
+    let doc =
+        save::detect::load_document(&m, &fixture("sort-them-ducks", "duckgame_save.json")).unwrap();
+
+    let writable = save::editor::writable_fields(&m, &doc);
+    assert!(!writable.keys().any(|p| p.starts_with("/ducks")));
+    assert!(writable.contains_key("/money"));
+}
+
+#[test]
+fn abilities_can_all_be_unlocked_at_once() {
+    let m = sort_them_ducks();
+    let (tmp, path) = ducks_save();
+    let backups = BackupManager::new(tmp.path().join("backups"));
+
+    let doc = save::detect::load_document(&m, &path).unwrap();
+    let preset = save::presets::find(&m, &doc, "abilities").expect("the abilities preset");
+    let edits = save::presets::expand(&m, &doc, preset);
+    save::apply_and_write(&m, &backups, &path, &edits, None, false).unwrap();
+
+    let after: serde_json::Value = serde_json::from_slice(&std::fs::read(&path).unwrap()).unwrap();
+    for flag in [
+        "/sprintUnlocked",
+        "/crouchUnlocked",
+        "/dunkADuckUnlocked",
+        "/findSameDuckUnlocked",
+        "/collectDuckUnlocked",
+        "/findShelfForDuckUnlocked",
+    ] {
+        assert_eq!(
+            after.pointer(flag).unwrap(),
+            &serde_json::json!(true),
+            "{flag}"
+        );
+    }
+}
+
+#[test]
+fn sort_them_ducks_labels_are_translated_into_every_shipped_language() {
+    let m = sort_them_ducks();
+    let doc =
+        save::detect::load_document(&m, &fixture("sort-them-ducks", "duckgame_save.json")).unwrap();
+
+    for locale in SHIPPED_LOCALES {
+        let view = save::editor::build(&m, "p", &doc, locale, Default::default());
+        let money = view.groups[0]
+            .fields
+            .iter()
+            .find(|f| f.id == "money")
+            .unwrap();
+        assert_ne!(money.label, "Money", "{locale} left 'Money' in English");
+    }
+}
+
+#[test]
+fn the_unity_save_folder_placeholder_is_used() {
+    // A plugin should never spell out `{HOME}/AppData/LocalLow` by hand.
+    let m = sort_them_ducks();
+    let root = &m.save_locations[0].root;
+    assert!(root.starts_with("{LOCALLOW}"), "{root}");
+}

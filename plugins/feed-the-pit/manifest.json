@@ -1666,12 +1666,12 @@
                         "label":  "Get rich",
                         "description":  "Set the money in save slot 1 to 999,999.",
                         "requires":  "/tracked_progress/save_slots/1/currency",
-                        "edits":  [
-                                      {
-                                          "value":  999999,
-                                          "pointer":  "/tracked_progress/save_slots/1/currency"
-                                      }
-                                  ],
+                        "set":  [
+                                    {
+                                        "value":  999999,
+                                        "pointer":  "/tracked_progress/save_slots/1/currency"
+                                    }
+                                ],
                         "label_i18n":  {
                                            "tr":  "Zengin ol",
                                            "de":  "Reich werden",
