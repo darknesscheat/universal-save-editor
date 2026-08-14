@@ -1,6 +1,10 @@
-# Universal Save Editor
+<p align="center">
+  <img src="docs/icon.png" alt="" width="128" height="128">
+</p>
 
-**Edit your offline game saves without touching raw save files.**
+<h1 align="center">Universal Save Editor</h1>
+
+<p align="center"><strong>Edit your offline game saves without touching raw save files.</strong></p>
 
 Change your health, your money, your inventory from a normal-looking settings
 screen. No hex editors, no JSON, no guessing which of `stat_04` and `stat_07` is
@@ -18,7 +22,9 @@ Games are shown with their artwork, read from the copy already on your computer.
 Nothing is downloaded and no game art is bundled. A game without artwork gets a
 generated tile instead of a bare line of text.
 
-> Screenshot placeholder: `docs/images/games.png`, `docs/images/editor.png`
+<p align="center">
+  <img src="docs/menu.png" alt="The game list: cover art read from the player's own installation, with the game's name underneath" width="560">
+</p>
 
 ---
 
